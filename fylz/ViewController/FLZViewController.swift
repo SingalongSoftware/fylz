@@ -17,9 +17,6 @@ class FLZViewController: UIViewController, UITableViewDelegate, UITableViewDataS
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    
   }
 
   override func didReceiveMemoryWarning() {
