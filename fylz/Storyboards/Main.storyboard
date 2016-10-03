@@ -21,7 +21,7 @@
                                 <rect key="frame" x="10" y="100" width="580" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="vhM-WI-4iQ" detailTextLabel="s3P-bc-APc" style="IBUITableViewCellStyleSubtitle" id="FcA-jt-2Nf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TBDReuseIdentifier" textLabel="vhM-WI-4iQ" detailTextLabel="s3P-bc-APc" style="IBUITableViewCellStyleSubtitle" id="FcA-jt-2Nf">
                                         <rect key="frame" x="0.0" y="28" width="580" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FcA-jt-2Nf" id="poC-uz-Ago">
