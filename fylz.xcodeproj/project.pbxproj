@@ -354,7 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = fylz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/fylz/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SingalongSoftware.fylz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,7 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = fylz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/fylz/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SingalongSoftware.fylz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +416,7 @@
 				120DEB361DA1D3C9002D7904 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		120DEB371DA1D3C9002D7904 /* Build configuration list for PBXNativeTarget "fylzTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				120DEB391DA1D3C9002D7904 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
