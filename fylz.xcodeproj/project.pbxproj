@@ -14,7 +14,6 @@
 		120DEB4C1DA1D8C6002D7904 /* FLZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB431DA1D8C6002D7904 /* FLZViewController.swift */; };
 		120DEB4D1DA1D8C6002D7904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB451DA1D8C6002D7904 /* Assets.xcassets */; };
 		120DEB4E1DA1D8C6002D7904 /* FLZAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB461DA1D8C6002D7904 /* FLZAppDelegate.swift */; };
-		120DEB4F1DA1D8C6002D7904 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB471DA1D8C6002D7904 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,7 +245,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				120DEB4F1DA1D8C6002D7904 /* Info.plist in Resources */,
 				120DEB4A1DA1D8C6002D7904 /* LaunchScreen.storyboard in Resources */,
 				120DEB4D1DA1D8C6002D7904 /* Assets.xcassets in Resources */,
 				120DEB4B1DA1D8C6002D7904 /* Main.storyboard in Resources */,
