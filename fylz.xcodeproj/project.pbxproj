@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FB52922086F18DC056FF332 /* libPods-fylz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 961A6540FCA32BEDB4C37B6C /* libPods-fylz.a */; };
 		120DEB301DA1D3C9002D7904 /* fylzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB2F1DA1D3C9002D7904 /* fylzTests.swift */; };
 		120DEB4A1DA1D8C6002D7904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB401DA1D8C6002D7904 /* LaunchScreen.storyboard */; };
 		120DEB4B1DA1D8C6002D7904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB411DA1D8C6002D7904 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D36017E5065E375BC3006E2 /* Pods-fylz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fylz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fylz/Pods-fylz.debug.xcconfig"; sourceTree = "<group>"; };
 		120DEB171DA1D3C9002D7904 /* fylz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fylz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		120DEB2B1DA1D3C9002D7904 /* fylzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fylzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		120DEB2F1DA1D3C9002D7904 /* fylzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fylzTests.swift; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		120DEB451DA1D8C6002D7904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		120DEB461DA1D8C6002D7904 /* FLZAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLZAppDelegate.swift; sourceTree = "<group>"; };
 		120DEB471DA1D8C6002D7904 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		664E97AC6E68641E52CA5CE0 /* Pods-fylz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fylz.release.xcconfig"; path = "Pods/Target Support Files/Pods-fylz/Pods-fylz.release.xcconfig"; sourceTree = "<group>"; };
+		961A6540FCA32BEDB4C37B6C /* libPods-fylz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fylz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FB52922086F18DC056FF332 /* libPods-fylz.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,8 @@
 				120DEB191DA1D3C9002D7904 /* fylz */,
 				120DEB2E1DA1D3C9002D7904 /* fylzTests */,
 				120DEB181DA1D3C9002D7904 /* Products */,
+				6973BB485C26A8BC592E2131 /* Pods */,
+				8CD324E14B8856064D8E71BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +144,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6973BB485C26A8BC592E2131 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D36017E5065E375BC3006E2 /* Pods-fylz.debug.xcconfig */,
+				664E97AC6E68641E52CA5CE0 /* Pods-fylz.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8CD324E14B8856064D8E71BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				961A6540FCA32BEDB4C37B6C /* libPods-fylz.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 120DEB341DA1D3C9002D7904 /* Build configuration list for PBXNativeTarget "fylz" */;
 			buildPhases = (
+				A39B49D5732079BE33B3E438 /* [CP] Check Pods Manifest.lock */,
 				120DEB131DA1D3C9002D7904 /* Sources */,
 				120DEB141DA1D3C9002D7904 /* Frameworks */,
 				120DEB151DA1D3C9002D7904 /* Resources */,
+				344144A511353784C54C7D9E /* [CP] Embed Pods Frameworks */,
+				C2AAF1DCDB2B879C82ED3BF9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +261,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		344144A511353784C54C7D9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fylz/Pods-fylz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A39B49D5732079BE33B3E438 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2AAF1DCDB2B879C82ED3BF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fylz/Pods-fylz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		120DEB131DA1D3C9002D7904 /* Sources */ = {
@@ -351,6 +426,7 @@
 		};
 		120DEB351DA1D3C9002D7904 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D36017E5065E375BC3006E2 /* Pods-fylz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -363,6 +439,7 @@
 		};
 		120DEB361DA1D3C9002D7904 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 664E97AC6E68641E52CA5CE0 /* Pods-fylz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
