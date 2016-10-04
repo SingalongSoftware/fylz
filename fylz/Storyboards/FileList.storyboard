@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--File List View Controller-->
         <scene sceneID="qe4-cm-qUF">
             <objects>
-                <viewController id="RRA-GX-php" sceneMemberID="viewController">
+                <viewController id="RRA-GX-php" customClass="FLZFileListViewController" customModule="fylz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jh6-k1-W9K"/>
                         <viewControllerLayoutGuide type="bottom" id="xCL-EG-Bdr"/>
@@ -46,6 +46,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RRA-GX-php" id="UVU-ud-9Ay"/>
+                                    <outlet property="delegate" destination="RRA-GX-php" id="zjG-p5-ike"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

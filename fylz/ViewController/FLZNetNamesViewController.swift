@@ -75,7 +75,6 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
   }
   
   // MARK: Helper
-//  BooleanType
   
   func reloadTableView()
   {
