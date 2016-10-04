@@ -21,8 +21,10 @@
 // -------------------------------------------------------------------------------
 
 #import <Foundation/Foundation.h>
+#import "TOSMBConstants.h"
 
 @class TONetBIOSNameServiceEntry;
+
 
 // -------------------------------------------------------------------------------
 // A block that is called whenever a device entry is added or removed from discovery
