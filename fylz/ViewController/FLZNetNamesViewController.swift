@@ -9,9 +9,10 @@
 import UIKit
 import TOSMBClient
 
-class FLZViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   let NetBIOSDiscoveryTimeout = 10.0
+  static let CellReuse = "NetNamesListCell"
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -27,15 +28,15 @@ class FLZViewController: UIViewController, UITableViewDelegate, UITableViewDataS
       { [unowned self] (nameEntry:TONetBIOSNameServiceEntry!) in
         let ipAddressString = self.netNames.resolveIPAddressWithName(nameEntry.name, type: nameEntry.type)
         self.netBIOSNames[ipAddressString] = nameEntry;
-        print("++++++++++ \(nameEntry.name)")
-        print(self.netBIOSNames);
+        
+        self.reloadTableView()
+
       },
       removed:
       { [unowned self] (nameEntry:TONetBIOSNameServiceEntry!) in
         let ipAddressString = self.netNames.resolveIPAddressWithName(nameEntry.name, type: nameEntry.type)
         self.netBIOSNames.removeValueForKey(ipAddressString)
-        print("---------- \(nameEntry.name)")
-        print(self.netBIOSNames);
+        
       }
     )
     
@@ -56,15 +57,37 @@ class FLZViewController: UIViewController, UITableViewDelegate, UITableViewDataS
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
   {
-    return 0
+    return self.netBIOSNames.count
   }
   
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
   {
-    return UITableViewCell(frame: CGRectZero)
+    let cell = tableView.dequeueReusableCellWithIdentifier(FLZNetNamesViewController.CellReuse, forIndexPath: indexPath)
+    
+    let ipAddress = Array(netBIOSNames.keys)[indexPath.row]
+    let netName = netBIOSNames[ipAddress]?.name
+    
+    cell.textLabel?.text = netName
+    cell.detailTextLabel?.text = ipAddress
+    
+    return cell
   }
   
+  // MARK: Helper
+//  BooleanType
   
+  func reloadTableView()
+  {
+    let isMainThread:BooleanType = NSThread.isMainThread()
+
+    guard isMainThread else
+    {
+      dispatch_async(dispatch_get_main_queue(),{ () -> Void in self.reloadTableView() } )
+      return;
+    }
+    
+    self.tableView.reloadData()
+  }
 }
 

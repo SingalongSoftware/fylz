@@ -10,7 +10,7 @@
 		120DEB301DA1D3C9002D7904 /* fylzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB2F1DA1D3C9002D7904 /* fylzTests.swift */; };
 		120DEB4A1DA1D8C6002D7904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB401DA1D8C6002D7904 /* LaunchScreen.storyboard */; };
 		120DEB4B1DA1D8C6002D7904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB411DA1D8C6002D7904 /* Main.storyboard */; };
-		120DEB4C1DA1D8C6002D7904 /* FLZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB431DA1D8C6002D7904 /* FLZViewController.swift */; };
+		120DEB4C1DA1D8C6002D7904 /* FLZNetNamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB431DA1D8C6002D7904 /* FLZNetNamesViewController.swift */; };
 		120DEB4D1DA1D8C6002D7904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB451DA1D8C6002D7904 /* Assets.xcassets */; };
 		120DEB4E1DA1D8C6002D7904 /* FLZAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB461DA1D8C6002D7904 /* FLZAppDelegate.swift */; };
 		8B58BCF18F3827DE75854A3A /* Pods_fylz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6328B0987796EE2170EAA6E8 /* Pods_fylz.framework */; };
@@ -34,7 +34,7 @@
 		120DEB311DA1D3C9002D7904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		120DEB401DA1D8C6002D7904 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		120DEB411DA1D8C6002D7904 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		120DEB431DA1D8C6002D7904 /* FLZViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLZViewController.swift; sourceTree = "<group>"; };
+		120DEB431DA1D8C6002D7904 /* FLZNetNamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLZNetNamesViewController.swift; sourceTree = "<group>"; };
 		120DEB451DA1D8C6002D7904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		120DEB461DA1D8C6002D7904 /* FLZAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLZAppDelegate.swift; sourceTree = "<group>"; };
 		120DEB471DA1D8C6002D7904 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		120DEB421DA1D8C6002D7904 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				120DEB431DA1D8C6002D7904 /* FLZViewController.swift */,
+				120DEB431DA1D8C6002D7904 /* FLZNetNamesViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				120DEB4C1DA1D8C6002D7904 /* FLZViewController.swift in Sources */,
+				120DEB4C1DA1D8C6002D7904 /* FLZNetNamesViewController.swift in Sources */,
 				120DEB4E1DA1D8C6002D7904 /* FLZAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
