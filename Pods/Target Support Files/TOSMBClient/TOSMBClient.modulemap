@@ -1,0 +1,6 @@
+framework module TOSMBClient {
+  umbrella header "TOSMBClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

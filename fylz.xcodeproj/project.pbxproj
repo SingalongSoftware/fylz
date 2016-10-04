@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FB52922086F18DC056FF332 /* libPods-fylz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 961A6540FCA32BEDB4C37B6C /* libPods-fylz.a */; };
 		120DEB301DA1D3C9002D7904 /* fylzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB2F1DA1D3C9002D7904 /* fylzTests.swift */; };
 		120DEB4A1DA1D8C6002D7904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB401DA1D8C6002D7904 /* LaunchScreen.storyboard */; };
 		120DEB4B1DA1D8C6002D7904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB411DA1D8C6002D7904 /* Main.storyboard */; };
 		120DEB4C1DA1D8C6002D7904 /* FLZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB431DA1D8C6002D7904 /* FLZViewController.swift */; };
 		120DEB4D1DA1D8C6002D7904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB451DA1D8C6002D7904 /* Assets.xcassets */; };
 		120DEB4E1DA1D8C6002D7904 /* FLZAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB461DA1D8C6002D7904 /* FLZAppDelegate.swift */; };
+		8B58BCF18F3827DE75854A3A /* Pods_fylz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6328B0987796EE2170EAA6E8 /* Pods_fylz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,10 @@
 		120DEB451DA1D8C6002D7904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		120DEB461DA1D8C6002D7904 /* FLZAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLZAppDelegate.swift; sourceTree = "<group>"; };
 		120DEB471DA1D8C6002D7904 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		120DEB561DA227B7002D7904 /* TOSMBClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TOSMBClient.framework; path = "../../../Library/Developer/Xcode/DerivedData/fylz-gkdqpehzmvwziggcsizesjxdjnhi/Build/Products/Debug-iphonesimulator/TOSMBClient/TOSMBClient.framework"; sourceTree = "<group>"; };
+		120DEB591DA2320B002D7904 /* fylz-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fylz-Bridging-Header.h"; sourceTree = "<group>"; };
+		6328B0987796EE2170EAA6E8 /* Pods_fylz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fylz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664E97AC6E68641E52CA5CE0 /* Pods-fylz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fylz.release.xcconfig"; path = "Pods/Target Support Files/Pods-fylz/Pods-fylz.release.xcconfig"; sourceTree = "<group>"; };
-		961A6540FCA32BEDB4C37B6C /* libPods-fylz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fylz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FB52922086F18DC056FF332 /* libPods-fylz.a in Frameworks */,
+				8B58BCF18F3827DE75854A3A /* Pods_fylz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				120DEB451DA1D8C6002D7904 /* Assets.xcassets */,
+				120DEB591DA2320B002D7904 /* fylz-Bridging-Header.h */,
 				120DEB461DA1D8C6002D7904 /* FLZAppDelegate.swift */,
 				120DEB471DA1D8C6002D7904 /* Info.plist */,
 			);
@@ -155,7 +158,8 @@
 		8CD324E14B8856064D8E71BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				961A6540FCA32BEDB4C37B6C /* libPods-fylz.a */,
+				120DEB561DA227B7002D7904 /* TOSMBClient.framework */,
+				6328B0987796EE2170EAA6E8 /* Pods_fylz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -341,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -378,6 +383,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "fylz/Support/fylz-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -387,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -417,6 +424,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "fylz/Support/fylz-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -427,11 +435,13 @@
 			baseConfigurationReference = 0D36017E5065E375BC3006E2 /* Pods-fylz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/fylz/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SingalongSoftware.fylz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -440,11 +450,13 @@
 			baseConfigurationReference = 664E97AC6E68641E52CA5CE0 /* Pods-fylz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/fylz/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SingalongSoftware.fylz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "Pods/**";
 			};
 			name = Release;
 		};

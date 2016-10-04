@@ -9,5 +9,6 @@
 #ifndef fylz_Bridging_Header_h
 #define fylz_Bridging_Header_h
 
+#import <TOSMBClient/TOSMBClient.h>
 
 #endif /* fylz_Bridging_Header_h */

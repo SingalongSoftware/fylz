@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TOSMBClient
 
 class FLZViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,7 +17,7 @@ class FLZViewController: UIViewController, UITableViewDelegate, UITableViewDataS
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    var x:TOSMBSession
   }
 
   override func didReceiveMemoryWarning() {

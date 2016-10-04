@@ -1,0 +1,6 @@
+framework module Pods_fylz {
+  umbrella header "Pods-fylz-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,116 +7,165 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14A8E8F46E679A69B8DC86F2EF90CF26 /* bdsm.h in Headers */ = {isa = PBXBuildFile; fileRef = CCB2F664CA770DC142E1689DDAE54A8E /* bdsm.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31D86E7EE02AB6C0F42F8FB2A33E36A9 /* TOSMBSessionDownloadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E1ABFEB1931F64C5E7F69839BD96F19B /* TOSMBSessionDownloadTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3569316BC5E106A727D96F1B67FCEB51 /* TOSMBConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = B01E28DAD2BA8F97D59CC5A2182B37BB /* TOSMBConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37805033D47DF303B179AA954E7EE441 /* TOSMBClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819AB8F83159E1A3FD0C58E850595DA /* TOSMBClient-dummy.m */; };
-		3964BDA4BE7997EE8D532E3E273DF6B8 /* smb_stat.h in Headers */ = {isa = PBXBuildFile; fileRef = 93018F36F2D157FE5CEC1396A43F152E /* smb_stat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C98857021B8C478FFE17A43390B6D4F /* TOSMBSession.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0AB283504BC4875AB62FCBE103EE19 /* TOSMBSession.m */; };
-		48D22342A1F86D7E1C704EACE98A9F41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		4D464C41CE05BE48087736ABB56F70D9 /* TONetBIOSNameService.h in Headers */ = {isa = PBXBuildFile; fileRef = D110A1631D026DAEF12FF3665190CC4F /* TONetBIOSNameService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E52E90331DABD4A0D651BE5BF3307E0 /* smb_dir.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7F9775A82173A6097DE306BCE3ADC7 /* smb_dir.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69E775277D4153F346BB8ECB74B4CEC2 /* TOSMBSessionFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 638B073C8838664C8EAFD4A6F8CB0640 /* TOSMBSessionFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70D6C92B9B23A58BE9AFE21ACBA4DE5B /* TOSMBSessionFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B2D90DD9A6A202699F438CC9AFF90 /* TOSMBSessionFile.m */; };
-		7695D8F426102306B47579C63F6A4143 /* netbios_ns.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB833962B040356B1AD2964B2F2058C /* netbios_ns.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D2F450AF2E4F2634CA924AC2F6547A9 /* smb_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 165440CD3225C31CB9E53D73F3DF746B /* smb_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F8D620DE551D9645FF3B652947B96D1 /* TOSMBSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 376E36BB7B43FFDF81AB4F208999A3C7 /* TOSMBSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		895B7B47D70350578F654AB356009800 /* TOSMBSessionDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B36165C611F75BAAB1157519E6DDFFD /* TOSMBSessionDownloadTask.m */; };
-		93E614B2D185C65EBAB7C4FAFBD62030 /* TONetBIOSNameServiceEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC01481F0018D89D0955F0758069976 /* TONetBIOSNameServiceEntry.m */; };
-		94AD789FDC011C7A71FEECB82095B576 /* Pods-fylz-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E360F3F0741A031C9D1101E165A34F /* Pods-fylz-dummy.m */; };
-		AEB983DDDD4C94C02ED84215E37A5BB3 /* TOSMBClient.h in Headers */ = {isa = PBXBuildFile; fileRef = C98C3A8DF12D4B72AB2A18608E7C447C /* TOSMBClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0F54381D64B0F97B292BD90B7CAEDC2 /* smb_file.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3A4FD401BA50E784E969A99743FD1A /* smb_file.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA9A2FC2F8712D14A105BD574FA009D6 /* TONetBIOSNameServiceEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = A1094D6D2A9EC978EAE0CFCB2B9E8394 /* TONetBIOSNameServiceEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA6FDA30E12E57909D39D41CC839AB88 /* smb_session.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F4E3AD9A04B716ECC432789A2D3C7C4 /* smb_session.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF13788589C727E4C7E8D881A57C2173 /* netbios_defs.h in Headers */ = {isa = PBXBuildFile; fileRef = 463216406115E53D287B4462B4A88C28 /* netbios_defs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0DD9E0E49555EFBECC574487C2DC073 /* TOSMBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C085ABF32413677286189FCE3639752 /* TOSMBConstants.m */; };
-		D671486DF9BE0B1784661E876ADC2607 /* libtasn1.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFA0BD864124E6F7CF2D623D94315C1 /* libtasn1.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB051939B087E343C2F1B8B9FBDD8BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		E16C33AB68AF26EB732653EB39E2FD92 /* TONetBIOSNameService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B8E777593905A38AE2C268040DCA4 /* TONetBIOSNameService.m */; };
-		F35E9753451AC724B7D7B46D4F354C7D /* smb_share.h in Headers */ = {isa = PBXBuildFile; fileRef = E349DD94131D41281B3F1631472F8206 /* smb_share.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB176D38156E34E8BBF7A3B354CF73BC /* smb_defs.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CDECD5A2534CD6A78CDB23EC71FEDEB /* smb_defs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		045B4AB9DE417AE009C1AD4201FD624B /* netbios_ns.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B35F8DF74077B49C3B61A1EEB7C202 /* netbios_ns.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		049CDA3960509A9E259C2164909FABF1 /* TOSMBSessionFile.h in Headers */ = {isa = PBXBuildFile; fileRef = DF9BF61D0E4FF8B7EB36751A5AC5A80A /* TOSMBSessionFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19594C23FBD6CE5458B810B0863F67C7 /* smb_session.h in Headers */ = {isa = PBXBuildFile; fileRef = BED40AEBE8C3D3508389574E95ED2111 /* smb_session.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22EA5E10B7D76EB349A28EFA8531DE09 /* smb_stat.h in Headers */ = {isa = PBXBuildFile; fileRef = FB063BAEA357942CF5D0B03668D07E39 /* smb_stat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25A9C97D0B0F19F9F176531FAF169C49 /* TONetBIOSNameService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8567E977C57469B81D47F41869120672 /* TONetBIOSNameService.m */; };
+		265D31122C5D81F910883E183D3C0B3E /* TOSMBSessionFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC19DA4049C824717EA0CA394A791F4 /* TOSMBSessionFile.m */; };
+		2D3ECEB3894AC8A9D701EA63069EB76A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		3336AA76267E5DA643AFCC26C7DFAB31 /* TONetBIOSNameServiceEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD1F26912E7421122E6E14FA822A512 /* TONetBIOSNameServiceEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34580D9424961267F58838FDCD90A7E6 /* smb_share.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DE1BE485FC3E6437C837E6D7D7488D1 /* smb_share.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		353A1057082D881A4E0B8D3AC8115383 /* TOSMBClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A944FD1591DA246B3DA0299297FB75EB /* TOSMBClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F12861BA9CB146B1CDE2559B16F90E0 /* smb_defs.h in Headers */ = {isa = PBXBuildFile; fileRef = 366FFB44DBEBD0DE0C01F43DEEC8FC07 /* smb_defs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CD3B2A843DC31FF87D87CB6FD07FF18 /* bdsm.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3876A082AB93AFE79A3D5967EB616F /* bdsm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51E17C94487520A2010F132F12FED4BE /* TOSMBConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F965102F986F1ED6C5A006A4BB89D5A /* TOSMBConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58B5756148500765E2B3DD467D340836 /* TOSMBSession.h in Headers */ = {isa = PBXBuildFile; fileRef = AA890135A53BEA88F138B25426A2E669 /* TOSMBSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E2F14070006F036C819B332275BAA3F /* smb_dir.h in Headers */ = {isa = PBXBuildFile; fileRef = 623E5FF601B3F4C01581A0450C5A0686 /* smb_dir.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EED1936A62A540E137607A86E3BFB3B /* netbios_defs.h in Headers */ = {isa = PBXBuildFile; fileRef = C4313997E4B53B8F56403BD5DD923628 /* netbios_defs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		764AE598FEE1EBD4A26D2E2F62F5E8E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		784DC4184C5A023AEAFED1210F757767 /* TONetBIOSNameServiceEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC7817A05B88EB4EA5A1A43236FE9DB /* TONetBIOSNameServiceEntry.m */; };
+		78ED254FA79CDAA85B099CDDD736BA61 /* Pods-fylz-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A837A84B3F03BED058B5BBC6B58F6E0D /* Pods-fylz-dummy.m */; };
+		7B9A4C49CC0A5AE1EBAC396A01405C78 /* smb_file.h in Headers */ = {isa = PBXBuildFile; fileRef = A28B7A7104B7ABBE3D23BE24D52BF5CA /* smb_file.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C38365A7AAA7C4E7FCB72DEDD1334F5 /* TOSMBSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F97E360F3C8BED1B45E07A5D017E0E /* TOSMBSession.m */; };
+		8139522A4B3AB5B309CBBF08C0B67B26 /* Pods-fylz-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BA008E21910919B1207978EBA278DD /* Pods-fylz-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8225C0AEB45F97257D3050F1EFDB81E2 /* TONetBIOSNameService.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B3D5ABC3841DB3AFC6D51C646A81880 /* TONetBIOSNameService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E554BE82D6236A2AC15A351F6E0C5A3 /* smb_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 1109E35E82FD9D5602F532F145EBB23A /* smb_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7F884E413FE2169D27A940BD7B1205F /* TOSMBClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B790D24E698FEF0892A344C18E3542F /* TOSMBClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5A8566F93AD0E074AB209B24412F781 /* TOSMBSessionDownloadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B58AED3D1328C19192F7963AF2F3E25 /* TOSMBSessionDownloadTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0CC1F518CC04790EBCF91D26C1CA496 /* TOSMBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6403743EFCC73616C446BC374FD1F5D5 /* TOSMBConstants.m */; };
+		DE1D576DB35042ACD0C94D6DF1221516 /* TOSMBSessionDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F751A6E72287ED4C9AE93819439A1DDB /* TOSMBSessionDownloadTask.m */; };
+		E62C2B604C6C491F13723CB1E674B998 /* libtasn1.h in Headers */ = {isa = PBXBuildFile; fileRef = 70025AEA26E57D0AD867FB46DCBEB1BC /* libtasn1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F14EC75976F991864F36D606EDA817F9 /* TOSMBClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B1EC51C7652546369CD191AB1E0E24 /* TOSMBClient-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D2E916A863EB0A9B89B4831F9C925AB5 /* PBXContainerItemProxy */ = {
+		03A3E8A45F92CBAA3F915BE043E47E3E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 09DC7859E5C5284A3A8216C937722100;
+			remoteGlobalIDString = A8F4E4CDF11CA5705D4336E262ECD155;
 			remoteInfo = TOSMBClient;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0074BC82EBE22168915490C59FD02D1C /* libTOSMBClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTOSMBClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CDECD5A2534CD6A78CDB23EC71FEDEB /* smb_defs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_defs.h; path = TOSMBClient/libdsm/bdsm/smb_defs.h; sourceTree = "<group>"; };
-		0DB833962B040356B1AD2964B2F2058C /* netbios_ns.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = netbios_ns.h; path = TOSMBClient/libdsm/bdsm/netbios_ns.h; sourceTree = "<group>"; };
-		165440CD3225C31CB9E53D73F3DF746B /* smb_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_types.h; path = TOSMBClient/libdsm/bdsm/smb_types.h; sourceTree = "<group>"; };
-		1C45A2F17735716CA9354E0D07561C09 /* libdsm.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libdsm.a; path = TOSMBClient/libdsm/libdsm.a; sourceTree = "<group>"; };
-		2C085ABF32413677286189FCE3639752 /* TOSMBConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSMBConstants.m; path = TOSMBClient/TOSMBConstants.m; sourceTree = "<group>"; };
-		36E360F3F0741A031C9D1101E165A34F /* Pods-fylz-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-fylz-dummy.m"; sourceTree = "<group>"; };
-		376E36BB7B43FFDF81AB4F208999A3C7 /* TOSMBSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSMBSession.h; path = TOSMBClient/TOSMBSession.h; sourceTree = "<group>"; };
-		3819AB8F83159E1A3FD0C58E850595DA /* TOSMBClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOSMBClient-dummy.m"; sourceTree = "<group>"; };
-		3F93406A4DA28F2F05195B175D458062 /* Pods-fylz-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-fylz-acknowledgements.markdown"; sourceTree = "<group>"; };
-		459647DAFFA1FDE452EA2D28C57DED41 /* TOSMBClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOSMBClient.xcconfig; sourceTree = "<group>"; };
-		463216406115E53D287B4462B4A88C28 /* netbios_defs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = netbios_defs.h; path = TOSMBClient/libdsm/bdsm/netbios_defs.h; sourceTree = "<group>"; };
-		48039632B5E24F870E74DD7254FF1E18 /* Pods-fylz-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-fylz-acknowledgements.plist"; sourceTree = "<group>"; };
-		5F4E3AD9A04B716ECC432789A2D3C7C4 /* smb_session.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_session.h; path = TOSMBClient/libdsm/bdsm/smb_session.h; sourceTree = "<group>"; };
-		638B073C8838664C8EAFD4A6F8CB0640 /* TOSMBSessionFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSMBSessionFile.h; path = TOSMBClient/TOSMBSessionFile.h; sourceTree = "<group>"; };
-		6532D1D0FCE8A691DDB63A54894EC3BA /* libtasn1.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libtasn1.a; path = TOSMBClient/libdsm/libtasn1.a; sourceTree = "<group>"; };
-		6BFA0BD864124E6F7CF2D623D94315C1 /* libtasn1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = libtasn1.h; path = TOSMBClient/libdsm/bdsm/libtasn1.h; sourceTree = "<group>"; };
-		75DC204239A3575DAC1714225BDADDE0 /* Pods-fylz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fylz.debug.xcconfig"; sourceTree = "<group>"; };
-		7B36165C611F75BAAB1157519E6DDFFD /* TOSMBSessionDownloadTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSMBSessionDownloadTask.m; path = TOSMBClient/TOSMBSessionDownloadTask.m; sourceTree = "<group>"; };
-		8098DB8E529A4E03C134AF5287BABC19 /* libPods-fylz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fylz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E7B8E777593905A38AE2C268040DCA4 /* TONetBIOSNameService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TONetBIOSNameService.m; path = TOSMBClient/TONetBIOSNameService.m; sourceTree = "<group>"; };
-		93018F36F2D157FE5CEC1396A43F152E /* smb_stat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_stat.h; path = TOSMBClient/libdsm/bdsm/smb_stat.h; sourceTree = "<group>"; };
+		03F97E360F3C8BED1B45E07A5D017E0E /* TOSMBSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSMBSession.m; path = TOSMBClient/TOSMBSession.m; sourceTree = "<group>"; };
+		0DE1BE485FC3E6437C837E6D7D7488D1 /* smb_share.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_share.h; path = TOSMBClient/libdsm/bdsm/smb_share.h; sourceTree = "<group>"; };
+		1109E35E82FD9D5602F532F145EBB23A /* smb_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_types.h; path = TOSMBClient/libdsm/bdsm/smb_types.h; sourceTree = "<group>"; };
+		1CC7817A05B88EB4EA5A1A43236FE9DB /* TONetBIOSNameServiceEntry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TONetBIOSNameServiceEntry.m; path = TOSMBClient/TONetBIOSNameServiceEntry.m; sourceTree = "<group>"; };
+		25400587EFA93002855C83C28487BD1E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25B1EC51C7652546369CD191AB1E0E24 /* TOSMBClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOSMBClient-dummy.m"; sourceTree = "<group>"; };
+		2898DEB172E4D1A4372CFEDDB2658E08 /* Pods-fylz-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fylz-resources.sh"; sourceTree = "<group>"; };
+		2F965102F986F1ED6C5A006A4BB89D5A /* TOSMBConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSMBConstants.h; path = TOSMBClient/TOSMBConstants.h; sourceTree = "<group>"; };
+		33AB73379890BDA27100E3A0C2471E84 /* libtasn1.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libtasn1.a; path = TOSMBClient/libdsm/libtasn1.a; sourceTree = "<group>"; };
+		366FFB44DBEBD0DE0C01F43DEEC8FC07 /* smb_defs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_defs.h; path = TOSMBClient/libdsm/bdsm/smb_defs.h; sourceTree = "<group>"; };
+		3B3876A082AB93AFE79A3D5967EB616F /* bdsm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bdsm.h; path = TOSMBClient/libdsm/bdsm/bdsm.h; sourceTree = "<group>"; };
+		41B35F8DF74077B49C3B61A1EEB7C202 /* netbios_ns.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = netbios_ns.h; path = TOSMBClient/libdsm/bdsm/netbios_ns.h; sourceTree = "<group>"; };
+		50BA008E21910919B1207978EBA278DD /* Pods-fylz-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-fylz-umbrella.h"; sourceTree = "<group>"; };
+		5AA3BE6281088CC0E587CC758A2890A4 /* TOSMBClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOSMBClient-prefix.pch"; sourceTree = "<group>"; };
+		623E5FF601B3F4C01581A0450C5A0686 /* smb_dir.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_dir.h; path = TOSMBClient/libdsm/bdsm/smb_dir.h; sourceTree = "<group>"; };
+		6403743EFCC73616C446BC374FD1F5D5 /* TOSMBConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSMBConstants.m; path = TOSMBClient/TOSMBConstants.m; sourceTree = "<group>"; };
+		6AE17B1EB3C05708164F0CF4632C9FB7 /* TOSMBClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TOSMBClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B790D24E698FEF0892A344C18E3542F /* TOSMBClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSMBClient.h; path = TOSMBClient/TOSMBClient.h; sourceTree = "<group>"; };
+		70025AEA26E57D0AD867FB46DCBEB1BC /* libtasn1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = libtasn1.h; path = TOSMBClient/libdsm/bdsm/libtasn1.h; sourceTree = "<group>"; };
+		71EF12A426E06745FB98BD6C88B426F1 /* Pods-fylz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fylz.debug.xcconfig"; sourceTree = "<group>"; };
+		7AF13D3EF37F8ABC56AE1DE386DD9FC0 /* TOSMBClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOSMBClient.xcconfig; sourceTree = "<group>"; };
+		7B58AED3D1328C19192F7963AF2F3E25 /* TOSMBSessionDownloadTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSMBSessionDownloadTask.h; path = TOSMBClient/TOSMBSessionDownloadTask.h; sourceTree = "<group>"; };
+		8490B42BEBB7F4F6A369D877450E14F3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8567E977C57469B81D47F41869120672 /* TONetBIOSNameService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TONetBIOSNameService.m; path = TOSMBClient/TONetBIOSNameService.m; sourceTree = "<group>"; };
+		8BC19DA4049C824717EA0CA394A791F4 /* TOSMBSessionFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSMBSessionFile.m; path = TOSMBClient/TOSMBSessionFile.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94219909D2EC21E00FE14C143E912666 /* Pods-fylz-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fylz-resources.sh"; sourceTree = "<group>"; };
-		A1094D6D2A9EC978EAE0CFCB2B9E8394 /* TONetBIOSNameServiceEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TONetBIOSNameServiceEntry.h; path = TOSMBClient/TONetBIOSNameServiceEntry.h; sourceTree = "<group>"; };
-		AE3A4FD401BA50E784E969A99743FD1A /* smb_file.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_file.h; path = TOSMBClient/libdsm/bdsm/smb_file.h; sourceTree = "<group>"; };
-		B01E28DAD2BA8F97D59CC5A2182B37BB /* TOSMBConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSMBConstants.h; path = TOSMBClient/TOSMBConstants.h; sourceTree = "<group>"; };
-		BCC7523E63A243FE71AA74E53B75AF59 /* Pods-fylz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fylz.release.xcconfig"; sourceTree = "<group>"; };
-		BE4B2D90DD9A6A202699F438CC9AFF90 /* TOSMBSessionFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSMBSessionFile.m; path = TOSMBClient/TOSMBSessionFile.m; sourceTree = "<group>"; };
-		C98C3A8DF12D4B72AB2A18608E7C447C /* TOSMBClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSMBClient.h; path = TOSMBClient/TOSMBClient.h; sourceTree = "<group>"; };
-		CCB2F664CA770DC142E1689DDAE54A8E /* bdsm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bdsm.h; path = TOSMBClient/libdsm/bdsm/bdsm.h; sourceTree = "<group>"; };
+		9B3D5ABC3841DB3AFC6D51C646A81880 /* TONetBIOSNameService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TONetBIOSNameService.h; path = TOSMBClient/TONetBIOSNameService.h; sourceTree = "<group>"; };
+		9CD1F26912E7421122E6E14FA822A512 /* TONetBIOSNameServiceEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TONetBIOSNameServiceEntry.h; path = TOSMBClient/TONetBIOSNameServiceEntry.h; sourceTree = "<group>"; };
+		A1E30116B2BCFD50B6B10FED4E083533 /* Pods_fylz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fylz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A28B7A7104B7ABBE3D23BE24D52BF5CA /* smb_file.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_file.h; path = TOSMBClient/libdsm/bdsm/smb_file.h; sourceTree = "<group>"; };
+		A48F9F8715415C28A4EF1A0520E3B482 /* Pods-fylz.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-fylz.modulemap"; sourceTree = "<group>"; };
+		A837A84B3F03BED058B5BBC6B58F6E0D /* Pods-fylz-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-fylz-dummy.m"; sourceTree = "<group>"; };
+		A944FD1591DA246B3DA0299297FB75EB /* TOSMBClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOSMBClient-umbrella.h"; sourceTree = "<group>"; };
+		AA890135A53BEA88F138B25426A2E669 /* TOSMBSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSMBSession.h; path = TOSMBClient/TOSMBSession.h; sourceTree = "<group>"; };
+		BED40AEBE8C3D3508389574E95ED2111 /* smb_session.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_session.h; path = TOSMBClient/libdsm/bdsm/smb_session.h; sourceTree = "<group>"; };
+		C4313997E4B53B8F56403BD5DD923628 /* netbios_defs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = netbios_defs.h; path = TOSMBClient/libdsm/bdsm/netbios_defs.h; sourceTree = "<group>"; };
+		C49DE860D204EA1CACB1AD1F633C548B /* libdsm.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libdsm.a; path = TOSMBClient/libdsm/libdsm.a; sourceTree = "<group>"; };
+		CB1FC2D9E6906FFE9A474653A7E4A951 /* Pods-fylz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fylz.release.xcconfig"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D110A1631D026DAEF12FF3665190CC4F /* TONetBIOSNameService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TONetBIOSNameService.h; path = TOSMBClient/TONetBIOSNameService.h; sourceTree = "<group>"; };
-		DA5655CF789906DF39C983E65B487FAA /* Pods-fylz-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fylz-frameworks.sh"; sourceTree = "<group>"; };
-		DFC01481F0018D89D0955F0758069976 /* TONetBIOSNameServiceEntry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TONetBIOSNameServiceEntry.m; path = TOSMBClient/TONetBIOSNameServiceEntry.m; sourceTree = "<group>"; };
-		E1ABFEB1931F64C5E7F69839BD96F19B /* TOSMBSessionDownloadTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSMBSessionDownloadTask.h; path = TOSMBClient/TOSMBSessionDownloadTask.h; sourceTree = "<group>"; };
-		E349DD94131D41281B3F1631472F8206 /* smb_share.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_share.h; path = TOSMBClient/libdsm/bdsm/smb_share.h; sourceTree = "<group>"; };
-		E6CC80572A10D298C5FCA1A0A39952BD /* TOSMBClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOSMBClient-prefix.pch"; sourceTree = "<group>"; };
-		EC0AB283504BC4875AB62FCBE103EE19 /* TOSMBSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSMBSession.m; path = TOSMBClient/TOSMBSession.m; sourceTree = "<group>"; };
-		FE7F9775A82173A6097DE306BCE3ADC7 /* smb_dir.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_dir.h; path = TOSMBClient/libdsm/bdsm/smb_dir.h; sourceTree = "<group>"; };
+		DF9BF61D0E4FF8B7EB36751A5AC5A80A /* TOSMBSessionFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSMBSessionFile.h; path = TOSMBClient/TOSMBSessionFile.h; sourceTree = "<group>"; };
+		E419870ED6C957353D38639D05DD68EB /* Pods-fylz-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-fylz-acknowledgements.plist"; sourceTree = "<group>"; };
+		EB95DCD19A34CE103556C952E777F945 /* Pods-fylz-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-fylz-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EBFCAA869B0D8C193FF0FEC0A6859902 /* TOSMBClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TOSMBClient.modulemap; sourceTree = "<group>"; };
+		F52374AC1C829F9A372BA441D053B44F /* Pods-fylz-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fylz-frameworks.sh"; sourceTree = "<group>"; };
+		F751A6E72287ED4C9AE93819439A1DDB /* TOSMBSessionDownloadTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSMBSessionDownloadTask.m; path = TOSMBClient/TOSMBSessionDownloadTask.m; sourceTree = "<group>"; };
+		FB063BAEA357942CF5D0B03668D07E39 /* smb_stat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = smb_stat.h; path = TOSMBClient/libdsm/bdsm/smb_stat.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		200E7BDDC98BDD80CFEE2304E0D9444A /* Frameworks */ = {
+		97516AD885E01A6A5CC4F83E3C596A74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48D22342A1F86D7E1C704EACE98A9F41 /* Foundation.framework in Frameworks */,
+				764AE598FEE1EBD4A26D2E2F62F5E8E4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AECCC83861AD342D840F7FF738A60613 /* Frameworks */ = {
+		C31EBBC431E6E67F73282191EB5598A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB051939B087E343C2F1B8B9FBDD8BB5 /* Foundation.framework in Frameworks */,
+				2D3ECEB3894AC8A9D701EA63069EB76A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09687EFEEE971731CA8078A0C203464E /* Products */ = {
+		232B7C749C3D09AE7BF273A0B4B8A798 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8098DB8E529A4E03C134AF5287BABC19 /* libPods-fylz.a */,
-				0074BC82EBE22168915490C59FD02D1C /* libTOSMBClient.a */,
+				C49DE860D204EA1CACB1AD1F633C548B /* libdsm.a */,
+				33AB73379890BDA27100E3A0C2471E84 /* libtasn1.a */,
 			);
-			name = Products;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2DAFEBEBE5900F4CB76D4E310476B1D9 /* TOSMBClient */ = {
+			isa = PBXGroup;
+			children = (
+				3B3876A082AB93AFE79A3D5967EB616F /* bdsm.h */,
+				70025AEA26E57D0AD867FB46DCBEB1BC /* libtasn1.h */,
+				C4313997E4B53B8F56403BD5DD923628 /* netbios_defs.h */,
+				41B35F8DF74077B49C3B61A1EEB7C202 /* netbios_ns.h */,
+				366FFB44DBEBD0DE0C01F43DEEC8FC07 /* smb_defs.h */,
+				623E5FF601B3F4C01581A0450C5A0686 /* smb_dir.h */,
+				A28B7A7104B7ABBE3D23BE24D52BF5CA /* smb_file.h */,
+				BED40AEBE8C3D3508389574E95ED2111 /* smb_session.h */,
+				0DE1BE485FC3E6437C837E6D7D7488D1 /* smb_share.h */,
+				FB063BAEA357942CF5D0B03668D07E39 /* smb_stat.h */,
+				1109E35E82FD9D5602F532F145EBB23A /* smb_types.h */,
+				9B3D5ABC3841DB3AFC6D51C646A81880 /* TONetBIOSNameService.h */,
+				8567E977C57469B81D47F41869120672 /* TONetBIOSNameService.m */,
+				9CD1F26912E7421122E6E14FA822A512 /* TONetBIOSNameServiceEntry.h */,
+				1CC7817A05B88EB4EA5A1A43236FE9DB /* TONetBIOSNameServiceEntry.m */,
+				6B790D24E698FEF0892A344C18E3542F /* TOSMBClient.h */,
+				2F965102F986F1ED6C5A006A4BB89D5A /* TOSMBConstants.h */,
+				6403743EFCC73616C446BC374FD1F5D5 /* TOSMBConstants.m */,
+				AA890135A53BEA88F138B25426A2E669 /* TOSMBSession.h */,
+				03F97E360F3C8BED1B45E07A5D017E0E /* TOSMBSession.m */,
+				7B58AED3D1328C19192F7963AF2F3E25 /* TOSMBSessionDownloadTask.h */,
+				F751A6E72287ED4C9AE93819439A1DDB /* TOSMBSessionDownloadTask.m */,
+				DF9BF61D0E4FF8B7EB36751A5AC5A80A /* TOSMBSessionFile.h */,
+				8BC19DA4049C824717EA0CA394A791F4 /* TOSMBSessionFile.m */,
+				232B7C749C3D09AE7BF273A0B4B8A798 /* Frameworks */,
+				EE5C03D582A1C926FB58CD55FF817392 /* Support Files */,
+			);
+			path = TOSMBClient;
+			sourceTree = "<group>";
+		};
+		33DA693DD68EF6FFE7581F1194F921B4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7403B5BA385D2F0CE75E70AB84BDBD3 /* Pods-fylz */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -127,18 +176,19 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		568D7862BBE9EB7723524B6BF244FA0C /* Targets Support Files */ = {
+		62965EF82DA2067DB6E7C8730D8B30E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAF774E79145A6C287E7A57EE812ECE1 /* Pods-fylz */,
+				A1E30116B2BCFD50B6B10FED4E083533 /* Pods_fylz.framework */,
+				6AE17B1EB3C05708164F0CF4632C9FB7 /* TOSMBClient.framework */,
 			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7042F042A8C0B264E76F2C52A325576D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F9CCB31232AC38E204DFD0AE8B4DA186 /* TOSMBClient */,
+				2DAFEBEBE5900F4CB76D4E310476B1D9 /* TOSMBClient */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -149,20 +199,9 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				7042F042A8C0B264E76F2C52A325576D /* Pods */,
-				09687EFEEE971731CA8078A0C203464E /* Products */,
-				568D7862BBE9EB7723524B6BF244FA0C /* Targets Support Files */,
+				62965EF82DA2067DB6E7C8730D8B30E3 /* Products */,
+				33DA693DD68EF6FFE7581F1194F921B4 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		9A25E3252C04C59C454AA11668FE72BC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				459647DAFFA1FDE452EA2D28C57DED41 /* TOSMBClient.xcconfig */,
-				3819AB8F83159E1A3FD0C58E850595DA /* TOSMBClient-dummy.m */,
-				E6CC80572A10D298C5FCA1A0A39952BD /* TOSMBClient-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TOSMBClient";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -173,101 +212,85 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DAF774E79145A6C287E7A57EE812ECE1 /* Pods-fylz */ = {
+		E7403B5BA385D2F0CE75E70AB84BDBD3 /* Pods-fylz */ = {
 			isa = PBXGroup;
 			children = (
-				3F93406A4DA28F2F05195B175D458062 /* Pods-fylz-acknowledgements.markdown */,
-				48039632B5E24F870E74DD7254FF1E18 /* Pods-fylz-acknowledgements.plist */,
-				36E360F3F0741A031C9D1101E165A34F /* Pods-fylz-dummy.m */,
-				DA5655CF789906DF39C983E65B487FAA /* Pods-fylz-frameworks.sh */,
-				94219909D2EC21E00FE14C143E912666 /* Pods-fylz-resources.sh */,
-				75DC204239A3575DAC1714225BDADDE0 /* Pods-fylz.debug.xcconfig */,
-				BCC7523E63A243FE71AA74E53B75AF59 /* Pods-fylz.release.xcconfig */,
+				8490B42BEBB7F4F6A369D877450E14F3 /* Info.plist */,
+				A48F9F8715415C28A4EF1A0520E3B482 /* Pods-fylz.modulemap */,
+				EB95DCD19A34CE103556C952E777F945 /* Pods-fylz-acknowledgements.markdown */,
+				E419870ED6C957353D38639D05DD68EB /* Pods-fylz-acknowledgements.plist */,
+				A837A84B3F03BED058B5BBC6B58F6E0D /* Pods-fylz-dummy.m */,
+				F52374AC1C829F9A372BA441D053B44F /* Pods-fylz-frameworks.sh */,
+				2898DEB172E4D1A4372CFEDDB2658E08 /* Pods-fylz-resources.sh */,
+				50BA008E21910919B1207978EBA278DD /* Pods-fylz-umbrella.h */,
+				71EF12A426E06745FB98BD6C88B426F1 /* Pods-fylz.debug.xcconfig */,
+				CB1FC2D9E6906FFE9A474653A7E4A951 /* Pods-fylz.release.xcconfig */,
 			);
 			name = "Pods-fylz";
 			path = "Target Support Files/Pods-fylz";
 			sourceTree = "<group>";
 		};
-		E582D07E705E21573C241C4EBEE0D37B /* Frameworks */ = {
+		EE5C03D582A1C926FB58CD55FF817392 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1C45A2F17735716CA9354E0D07561C09 /* libdsm.a */,
-				6532D1D0FCE8A691DDB63A54894EC3BA /* libtasn1.a */,
+				25400587EFA93002855C83C28487BD1E /* Info.plist */,
+				EBFCAA869B0D8C193FF0FEC0A6859902 /* TOSMBClient.modulemap */,
+				7AF13D3EF37F8ABC56AE1DE386DD9FC0 /* TOSMBClient.xcconfig */,
+				25B1EC51C7652546369CD191AB1E0E24 /* TOSMBClient-dummy.m */,
+				5AA3BE6281088CC0E587CC758A2890A4 /* TOSMBClient-prefix.pch */,
+				A944FD1591DA246B3DA0299297FB75EB /* TOSMBClient-umbrella.h */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F9CCB31232AC38E204DFD0AE8B4DA186 /* TOSMBClient */ = {
-			isa = PBXGroup;
-			children = (
-				CCB2F664CA770DC142E1689DDAE54A8E /* bdsm.h */,
-				6BFA0BD864124E6F7CF2D623D94315C1 /* libtasn1.h */,
-				463216406115E53D287B4462B4A88C28 /* netbios_defs.h */,
-				0DB833962B040356B1AD2964B2F2058C /* netbios_ns.h */,
-				0CDECD5A2534CD6A78CDB23EC71FEDEB /* smb_defs.h */,
-				FE7F9775A82173A6097DE306BCE3ADC7 /* smb_dir.h */,
-				AE3A4FD401BA50E784E969A99743FD1A /* smb_file.h */,
-				5F4E3AD9A04B716ECC432789A2D3C7C4 /* smb_session.h */,
-				E349DD94131D41281B3F1631472F8206 /* smb_share.h */,
-				93018F36F2D157FE5CEC1396A43F152E /* smb_stat.h */,
-				165440CD3225C31CB9E53D73F3DF746B /* smb_types.h */,
-				D110A1631D026DAEF12FF3665190CC4F /* TONetBIOSNameService.h */,
-				8E7B8E777593905A38AE2C268040DCA4 /* TONetBIOSNameService.m */,
-				A1094D6D2A9EC978EAE0CFCB2B9E8394 /* TONetBIOSNameServiceEntry.h */,
-				DFC01481F0018D89D0955F0758069976 /* TONetBIOSNameServiceEntry.m */,
-				C98C3A8DF12D4B72AB2A18608E7C447C /* TOSMBClient.h */,
-				B01E28DAD2BA8F97D59CC5A2182B37BB /* TOSMBConstants.h */,
-				2C085ABF32413677286189FCE3639752 /* TOSMBConstants.m */,
-				376E36BB7B43FFDF81AB4F208999A3C7 /* TOSMBSession.h */,
-				EC0AB283504BC4875AB62FCBE103EE19 /* TOSMBSession.m */,
-				E1ABFEB1931F64C5E7F69839BD96F19B /* TOSMBSessionDownloadTask.h */,
-				7B36165C611F75BAAB1157519E6DDFFD /* TOSMBSessionDownloadTask.m */,
-				638B073C8838664C8EAFD4A6F8CB0640 /* TOSMBSessionFile.h */,
-				BE4B2D90DD9A6A202699F438CC9AFF90 /* TOSMBSessionFile.m */,
-				E582D07E705E21573C241C4EBEE0D37B /* Frameworks */,
-				9A25E3252C04C59C454AA11668FE72BC /* Support Files */,
-			);
-			path = TOSMBClient;
+			name = "Support Files";
+			path = "../Target Support Files/TOSMBClient";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		459272D2B47B9BFB0C281546A1B1B08A /* Headers */ = {
+		02FCF86FCFE1F46E9F3927337576395A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14A8E8F46E679A69B8DC86F2EF90CF26 /* bdsm.h in Headers */,
-				D671486DF9BE0B1784661E876ADC2607 /* libtasn1.h in Headers */,
-				CF13788589C727E4C7E8D881A57C2173 /* netbios_defs.h in Headers */,
-				7695D8F426102306B47579C63F6A4143 /* netbios_ns.h in Headers */,
-				FB176D38156E34E8BBF7A3B354CF73BC /* smb_defs.h in Headers */,
-				4E52E90331DABD4A0D651BE5BF3307E0 /* smb_dir.h in Headers */,
-				B0F54381D64B0F97B292BD90B7CAEDC2 /* smb_file.h in Headers */,
-				CA6FDA30E12E57909D39D41CC839AB88 /* smb_session.h in Headers */,
-				F35E9753451AC724B7D7B46D4F354C7D /* smb_share.h in Headers */,
-				3964BDA4BE7997EE8D532E3E273DF6B8 /* smb_stat.h in Headers */,
-				7D2F450AF2E4F2634CA924AC2F6547A9 /* smb_types.h in Headers */,
-				4D464C41CE05BE48087736ABB56F70D9 /* TONetBIOSNameService.h in Headers */,
-				BA9A2FC2F8712D14A105BD574FA009D6 /* TONetBIOSNameServiceEntry.h in Headers */,
-				AEB983DDDD4C94C02ED84215E37A5BB3 /* TOSMBClient.h in Headers */,
-				3569316BC5E106A727D96F1B67FCEB51 /* TOSMBConstants.h in Headers */,
-				7F8D620DE551D9645FF3B652947B96D1 /* TOSMBSession.h in Headers */,
-				31D86E7EE02AB6C0F42F8FB2A33E36A9 /* TOSMBSessionDownloadTask.h in Headers */,
-				69E775277D4153F346BB8ECB74B4CEC2 /* TOSMBSessionFile.h in Headers */,
+				4CD3B2A843DC31FF87D87CB6FD07FF18 /* bdsm.h in Headers */,
+				E62C2B604C6C491F13723CB1E674B998 /* libtasn1.h in Headers */,
+				6EED1936A62A540E137607A86E3BFB3B /* netbios_defs.h in Headers */,
+				045B4AB9DE417AE009C1AD4201FD624B /* netbios_ns.h in Headers */,
+				3F12861BA9CB146B1CDE2559B16F90E0 /* smb_defs.h in Headers */,
+				5E2F14070006F036C819B332275BAA3F /* smb_dir.h in Headers */,
+				7B9A4C49CC0A5AE1EBAC396A01405C78 /* smb_file.h in Headers */,
+				19594C23FBD6CE5458B810B0863F67C7 /* smb_session.h in Headers */,
+				34580D9424961267F58838FDCD90A7E6 /* smb_share.h in Headers */,
+				22EA5E10B7D76EB349A28EFA8531DE09 /* smb_stat.h in Headers */,
+				9E554BE82D6236A2AC15A351F6E0C5A3 /* smb_types.h in Headers */,
+				8225C0AEB45F97257D3050F1EFDB81E2 /* TONetBIOSNameService.h in Headers */,
+				3336AA76267E5DA643AFCC26C7DFAB31 /* TONetBIOSNameServiceEntry.h in Headers */,
+				353A1057082D881A4E0B8D3AC8115383 /* TOSMBClient-umbrella.h in Headers */,
+				A7F884E413FE2169D27A940BD7B1205F /* TOSMBClient.h in Headers */,
+				51E17C94487520A2010F132F12FED4BE /* TOSMBConstants.h in Headers */,
+				58B5756148500765E2B3DD467D340836 /* TOSMBSession.h in Headers */,
+				B5A8566F93AD0E074AB209B24412F781 /* TOSMBSessionDownloadTask.h in Headers */,
+				049CDA3960509A9E259C2164909FABF1 /* TOSMBSessionFile.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E0BB03B2E719528EC45DD9F67939AA0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8139522A4B3AB5B309CBBF08C0B67B26 /* Pods-fylz-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		09DC7859E5C5284A3A8216C937722100 /* TOSMBClient */ = {
+		A8F4E4CDF11CA5705D4336E262ECD155 /* TOSMBClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F00F35F8BD900E144767B05E33B98A4E /* Build configuration list for PBXNativeTarget "TOSMBClient" */;
+			buildConfigurationList = 280D8A73B1846E8D2E065D0B7765693A /* Build configuration list for PBXNativeTarget "TOSMBClient" */;
 			buildPhases = (
-				632538102AA6B0B433130D97EEF59619 /* Sources */,
-				AECCC83861AD342D840F7FF738A60613 /* Frameworks */,
-				459272D2B47B9BFB0C281546A1B1B08A /* Headers */,
+				F238AEAA285C9C89E3CB8E396186833E /* Sources */,
+				97516AD885E01A6A5CC4F83E3C596A74 /* Frameworks */,
+				02FCF86FCFE1F46E9F3927337576395A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -275,25 +298,26 @@
 			);
 			name = TOSMBClient;
 			productName = TOSMBClient;
-			productReference = 0074BC82EBE22168915490C59FD02D1C /* libTOSMBClient.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 6AE17B1EB3C05708164F0CF4632C9FB7 /* TOSMBClient.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		B3F3AD3A651EB6E0569800F754C211E4 /* Pods-fylz */ = {
+		C4D863AA43261F74D18526BEE58FE38F /* Pods-fylz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19EFF533FDE8F4313D947972B59D0496 /* Build configuration list for PBXNativeTarget "Pods-fylz" */;
+			buildConfigurationList = 8BC4BA6C797F316AE9ECEAF5125613BC /* Build configuration list for PBXNativeTarget "Pods-fylz" */;
 			buildPhases = (
-				22C22E76FFE28B554BC6493F5C80A138 /* Sources */,
-				200E7BDDC98BDD80CFEE2304E0D9444A /* Frameworks */,
+				A5E00D1F9752F976E4845BC6FB6B553C /* Sources */,
+				C31EBBC431E6E67F73282191EB5598A0 /* Frameworks */,
+				3E0BB03B2E719528EC45DD9F67939AA0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				18A6D8E819E83715336CFBA51258733C /* PBXTargetDependency */,
+				9C065255CF2CC209BFCCD4E48A8C6A85 /* PBXTargetDependency */,
 			);
 			name = "Pods-fylz";
 			productName = "Pods-fylz";
-			productReference = 8098DB8E529A4E03C134AF5287BABC19 /* libPods-fylz.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = A1E30116B2BCFD50B6B10FED4E083533 /* Pods_fylz.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -312,90 +336,110 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 09687EFEEE971731CA8078A0C203464E /* Products */;
+			productRefGroup = 62965EF82DA2067DB6E7C8730D8B30E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B3F3AD3A651EB6E0569800F754C211E4 /* Pods-fylz */,
-				09DC7859E5C5284A3A8216C937722100 /* TOSMBClient */,
+				C4D863AA43261F74D18526BEE58FE38F /* Pods-fylz */,
+				A8F4E4CDF11CA5705D4336E262ECD155 /* TOSMBClient */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		22C22E76FFE28B554BC6493F5C80A138 /* Sources */ = {
+		A5E00D1F9752F976E4845BC6FB6B553C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94AD789FDC011C7A71FEECB82095B576 /* Pods-fylz-dummy.m in Sources */,
+				78ED254FA79CDAA85B099CDDD736BA61 /* Pods-fylz-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		632538102AA6B0B433130D97EEF59619 /* Sources */ = {
+		F238AEAA285C9C89E3CB8E396186833E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E16C33AB68AF26EB732653EB39E2FD92 /* TONetBIOSNameService.m in Sources */,
-				93E614B2D185C65EBAB7C4FAFBD62030 /* TONetBIOSNameServiceEntry.m in Sources */,
-				37805033D47DF303B179AA954E7EE441 /* TOSMBClient-dummy.m in Sources */,
-				D0DD9E0E49555EFBECC574487C2DC073 /* TOSMBConstants.m in Sources */,
-				3C98857021B8C478FFE17A43390B6D4F /* TOSMBSession.m in Sources */,
-				895B7B47D70350578F654AB356009800 /* TOSMBSessionDownloadTask.m in Sources */,
-				70D6C92B9B23A58BE9AFE21ACBA4DE5B /* TOSMBSessionFile.m in Sources */,
+				25A9C97D0B0F19F9F176531FAF169C49 /* TONetBIOSNameService.m in Sources */,
+				784DC4184C5A023AEAFED1210F757767 /* TONetBIOSNameServiceEntry.m in Sources */,
+				F14EC75976F991864F36D606EDA817F9 /* TOSMBClient-dummy.m in Sources */,
+				C0CC1F518CC04790EBCF91D26C1CA496 /* TOSMBConstants.m in Sources */,
+				7C38365A7AAA7C4E7FCB72DEDD1334F5 /* TOSMBSession.m in Sources */,
+				DE1D576DB35042ACD0C94D6DF1221516 /* TOSMBSessionDownloadTask.m in Sources */,
+				265D31122C5D81F910883E183D3C0B3E /* TOSMBSessionFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		18A6D8E819E83715336CFBA51258733C /* PBXTargetDependency */ = {
+		9C065255CF2CC209BFCCD4E48A8C6A85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TOSMBClient;
-			target = 09DC7859E5C5284A3A8216C937722100 /* TOSMBClient */;
-			targetProxy = D2E916A863EB0A9B89B4831F9C925AB5 /* PBXContainerItemProxy */;
+			target = A8F4E4CDF11CA5705D4336E262ECD155 /* TOSMBClient */;
+			targetProxy = 03A3E8A45F92CBAA3F915BE043E47E3E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0EF36F9C66C3451E6034B05C5033D10B /* Release */ = {
+		0E9CD7A9309CC23B940D84CDA18B5CD2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCC7523E63A243FE71AA74E53B75AF59 /* Pods-fylz.release.xcconfig */;
+			baseConfigurationReference = 7AF13D3EF37F8ABC56AE1DE386DD9FC0 /* TOSMBClient.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TOSMBClient/TOSMBClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TOSMBClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TOSMBClient/TOSMBClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TOSMBClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		11B3232675BC0BAFE7605E66E66B4000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB1FC2D9E6906FFE9A474653A7E4A951 /* Pods-fylz.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-fylz/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-fylz/Pods-fylz.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_fylz;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		28F8D4775E2DACA9AE0CB43DEC50EFAC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 459647DAFFA1FDE452EA2D28C57DED41 /* TOSMBClient.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TOSMBClient/TOSMBClient-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -436,6 +480,39 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		416B5C4F5BE711D44F015CC16BDFE641 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71EF12A426E06745FB98BD6C88B426F1 /* Pods-fylz.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-fylz/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-fylz/Pods-fylz.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_fylz;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -479,56 +556,43 @@
 			};
 			name = Debug;
 		};
-		8473F92D63752E3465033BEE4012E024 /* Debug */ = {
+		8CA16824CFEDA09837D0E05AF9AC469E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75DC204239A3575DAC1714225BDADDE0 /* Pods-fylz.debug.xcconfig */;
+			baseConfigurationReference = 7AF13D3EF37F8ABC56AE1DE386DD9FC0 /* TOSMBClient.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		903787ED750A73A1EAE998156DD9B743 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 459647DAFFA1FDE452EA2D28C57DED41 /* TOSMBClient.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/TOSMBClient/TOSMBClient-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = "Target Support Files/TOSMBClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TOSMBClient/TOSMBClient.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = TOSMBClient;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		19EFF533FDE8F4313D947972B59D0496 /* Build configuration list for PBXNativeTarget "Pods-fylz" */ = {
+		280D8A73B1846E8D2E065D0B7765693A /* Build configuration list for PBXNativeTarget "TOSMBClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8473F92D63752E3465033BEE4012E024 /* Debug */,
-				0EF36F9C66C3451E6034B05C5033D10B /* Release */,
+				8CA16824CFEDA09837D0E05AF9AC469E /* Debug */,
+				0E9CD7A9309CC23B940D84CDA18B5CD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -542,11 +606,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F00F35F8BD900E144767B05E33B98A4E /* Build configuration list for PBXNativeTarget "TOSMBClient" */ = {
+		8BC4BA6C797F316AE9ECEAF5125613BC /* Build configuration list for PBXNativeTarget "Pods-fylz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				903787ED750A73A1EAE998156DD9B743 /* Debug */,
-				28F8D4775E2DACA9AE0CB43DEC50EFAC /* Release */,
+				416B5C4F5BE711D44F015CC16BDFE641 /* Debug */,
+				11B3232675BC0BAFE7605E66E66B4000 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
