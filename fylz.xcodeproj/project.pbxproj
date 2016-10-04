@@ -13,6 +13,7 @@
 		120DEB4C1DA1D8C6002D7904 /* FLZNetNamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB431DA1D8C6002D7904 /* FLZNetNamesViewController.swift */; };
 		120DEB4D1DA1D8C6002D7904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120DEB451DA1D8C6002D7904 /* Assets.xcassets */; };
 		120DEB4E1DA1D8C6002D7904 /* FLZAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB461DA1D8C6002D7904 /* FLZAppDelegate.swift */; };
+		12112D971DA381F30091F2D6 /* FileList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12112D961DA381F30091F2D6 /* FileList.storyboard */; };
 		8B58BCF18F3827DE75854A3A /* Pods_fylz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6328B0987796EE2170EAA6E8 /* Pods_fylz.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		120DEB471DA1D8C6002D7904 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		120DEB561DA227B7002D7904 /* TOSMBClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TOSMBClient.framework; path = "../../../Library/Developer/Xcode/DerivedData/fylz-gkdqpehzmvwziggcsizesjxdjnhi/Build/Products/Debug-iphonesimulator/TOSMBClient/TOSMBClient.framework"; sourceTree = "<group>"; };
 		120DEB591DA2320B002D7904 /* fylz-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fylz-Bridging-Header.h"; sourceTree = "<group>"; };
+		12112D961DA381F30091F2D6 /* FileList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FileList.storyboard; sourceTree = "<group>"; };
 		6328B0987796EE2170EAA6E8 /* Pods_fylz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fylz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664E97AC6E68641E52CA5CE0 /* Pods-fylz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fylz.release.xcconfig"; path = "Pods/Target Support Files/Pods-fylz/Pods-fylz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 			children = (
 				120DEB401DA1D8C6002D7904 /* LaunchScreen.storyboard */,
 				120DEB411DA1D8C6002D7904 /* Main.storyboard */,
+				12112D961DA381F30091F2D6 /* FileList.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				120DEB4A1DA1D8C6002D7904 /* LaunchScreen.storyboard in Resources */,
 				120DEB4D1DA1D8C6002D7904 /* Assets.xcassets in Resources */,
+				12112D971DA381F30091F2D6 /* FileList.storyboard in Resources */,
 				120DEB4B1DA1D8C6002D7904 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
