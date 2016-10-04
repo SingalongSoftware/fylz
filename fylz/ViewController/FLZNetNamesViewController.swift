@@ -11,13 +11,17 @@ import TOSMBClient
 
 class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-  let NetBIOSDiscoveryTimeout = 10.0
   static let CellReuse = "NetNamesListCell"
+
+  let NetBIOSDiscoveryTimeout = 10.0
+  let SegueToFileList = "toFileList"
   
   @IBOutlet weak var tableView: UITableView!
   
   var netBIOSNames = [String:TONetBIOSNameServiceEntry]();
   let netNames = TONetBIOSNameService()
+  
+  // MARK: Lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -72,6 +76,22 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
     cell.detailTextLabel?.text = ipAddress
     
     return cell
+  }
+  
+  // MARK: Transition
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    if (segue.identifier == SegueToFileList)
+    {
+      guard let fileListVC = segue.destinationViewController as? FLZFileListViewController,
+            let cell = sender as? UITableViewCell else
+      {
+        return
+      }
+      
+      fileListVC.host(cell.textLabel?.text, ipAddress: cell.detailTextLabel?.text)
+    }
   }
   
   // MARK: Helper

@@ -53,7 +53,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="0jT-B6-52i" kind="show" id="c9b-Zi-b7N"/>
+                                            <segue destination="0jT-B6-52i" kind="show" identifier="toFileList" id="c9b-Zi-b7N"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -7,11 +7,37 @@
 //
 
 import UIKit
-
+import TOSMBClient
 
 class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   static let CellReuse = "FileListCell"
+  
+  var smbSession:TOSMBSession!
+  var fileList = [TOSMBSessionFile]()
+  
+  // MARK: Public
+  
+  func host(hostName:String?, ipAddress:String?)
+  {
+    guard let hostName = hostName, ipAddress = ipAddress else
+    {
+      return
+    }
+    
+    print ("host \(hostName), ip \(ipAddress)")
+    smbSession = TOSMBSession(hostName: hostName, ipAddress: ipAddress)
+  }
+  
+  // MARK: Lifecycle
+  
+  override func viewDidLoad()
+  {
+    smbSession.setLoginCredentialsWithUserName("", password: "")
+    let files = try? smbSession.requestContentsOfDirectoryAtFilePath("")
+
+    print(files)
+  }
   
   // MARK: UITableViewDataSource
   
