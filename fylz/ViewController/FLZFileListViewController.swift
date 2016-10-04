@@ -16,6 +16,8 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   var smbSession:TOSMBSession!
   var fileList = [TOSMBSessionFile]()
   
+  @IBOutlet weak var tableView: UITableView!
+  
   // MARK: Public
   
   func host(hostName:String?, ipAddress:String?)
@@ -34,9 +36,11 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   override func viewDidLoad()
   {
     smbSession.setLoginCredentialsWithUserName("", password: "")
-    let files = try? smbSession.requestContentsOfDirectoryAtFilePath("")
+    guard let files = try? smbSession.requestContentsOfDirectoryAtFilePath("") as! [TOSMBSessionFile] else { return }
 
-    print(files)
+    fileList.appendContentsOf(files)
+  
+    self.tableView.reloadData()
   }
   
   // MARK: UITableViewDataSource
@@ -49,7 +53,7 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
   {
-    return 0
+    return fileList.count
   }
   
   
@@ -57,6 +61,10 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   {
     let cell = tableView.dequeueReusableCellWithIdentifier(FLZFileListViewController.CellReuse, forIndexPath: indexPath)
 
+    let file = fileList[indexPath.row]
+    
+    cell.textLabel?.text = file.filePath + (file.directory ? "/" : "")
+    cell.detailTextLabel?.text = "Size:\(file.fileSize), Modified:\(file.modificationTime)"
     
     return cell
   }
