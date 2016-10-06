@@ -57,12 +57,12 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
     
     if (!self.pathStart.hasPrefix("/"))
     {
-      self.pathStart = self.pathStart + "/"
+      self.pathStart = "/" + self.pathStart
     }
     
     if (!self.pathStart.hasPrefix("//"))
     {
-      self.pathStart = self.pathStart + "/"
+      self.pathStart = "/" + self.pathStart
     }
     
     print (self.pathStart)
@@ -153,6 +153,16 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   // MARK: Segmented Control
   
   
+  @IBAction func sortFileList(sender: UISegmentedControl)
+  {
+    if (self.currentSort.rawValue == sender.selectedSegmentIndex)
+    {
+      self.sortOrderToggle(self.currentSort)
+    }
+    
+    self.sortFileList(by: SortBy(rawValue: sender.selectedSegmentIndex)!)
+  }
+  
   func sortOrderToggle(sortBy:SortBy)
   {
     let ascending = sortOrder[sortBy.rawValue] == SortOrder.Ascending
@@ -166,23 +176,13 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
     }
   }
   
-  @IBAction func sortFileList(sender: UISegmentedControl)
-  {
-    if (self.currentSort.rawValue == sender.selectedSegmentIndex)
-    {
-      self.sortOrderToggle(self.currentSort)
-    }
-    
-    self.sortFileList(by: SortBy(rawValue: sender.selectedSegmentIndex)!)
-  }
-  
   func sortFileList(by sortBy:SortBy)
   {
     let ascending = sortOrder[sortBy.rawValue] == SortOrder.Ascending
     switch (sortBy.rawValue)
     {
       case SortBy.Name.rawValue:
-        fileList = fileList.sort({ ascending ? $0.name < $1.name : $0.name > $1.name })
+        fileList = fileList.sort({ ascending ? $0.name.caselessLesserThan($1.name) : $0.name.caselessGreaterThan($1.name) })
         break;
       
       case SortBy.Size.rawValue:
