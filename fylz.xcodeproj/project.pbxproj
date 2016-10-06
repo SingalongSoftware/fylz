@@ -18,6 +18,7 @@
 		12112D9C1DA5F6DE0091F2D6 /* CollectionType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12112D9B1DA5F6DE0091F2D6 /* CollectionType+Extensions.swift */; };
 		12112D9E1DA5FB910091F2D6 /* FLZFileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12112D9D1DA5FB910091F2D6 /* FLZFileCell.swift */; };
 		12112DA01DA606B80091F2D6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12112D9F1DA606B80091F2D6 /* Date+Extensions.swift */; };
+		12112DA21DA62EFB0091F2D6 /* FLZSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12112DA11DA62EFB0091F2D6 /* FLZSegmentedControl.swift */; };
 		8B58BCF18F3827DE75854A3A /* Pods_fylz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6328B0987796EE2170EAA6E8 /* Pods_fylz.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		12112D9B1DA5F6DE0091F2D6 /* CollectionType+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CollectionType+Extensions.swift"; path = "Extensions/CollectionType+Extensions.swift"; sourceTree = "<group>"; };
 		12112D9D1DA5FB910091F2D6 /* FLZFileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLZFileCell.swift; sourceTree = "<group>"; };
 		12112D9F1DA606B80091F2D6 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Extensions.swift"; path = "Extensions/Date+Extensions.swift"; sourceTree = "<group>"; };
+		12112DA11DA62EFB0091F2D6 /* FLZSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLZSegmentedControl.swift; sourceTree = "<group>"; };
 		6328B0987796EE2170EAA6E8 /* Pods_fylz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fylz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664E97AC6E68641E52CA5CE0 /* Pods-fylz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fylz.release.xcconfig"; path = "Pods/Target Support Files/Pods-fylz/Pods-fylz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				12112D9D1DA5FB910091F2D6 /* FLZFileCell.swift */,
+				12112DA11DA62EFB0091F2D6 /* FLZSegmentedControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			files = (
 				120DEB4C1DA1D8C6002D7904 /* FLZNetNamesViewController.swift in Sources */,
 				120DEB4E1DA1D8C6002D7904 /* FLZAppDelegate.swift in Sources */,
+				12112DA21DA62EFB0091F2D6 /* FLZSegmentedControl.swift in Sources */,
 				12112D991DA385210091F2D6 /* FLZFileListViewController.swift in Sources */,
 				12112D9E1DA5FB910091F2D6 /* FLZFileCell.swift in Sources */,
 				12112D9C1DA5F6DE0091F2D6 /* CollectionType+Extensions.swift in Sources */,

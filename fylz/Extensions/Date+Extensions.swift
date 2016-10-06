@@ -58,4 +58,13 @@ extension NSDate {
     return ""
   }
   
+  func isBefore(otherDate:NSDate) -> Bool
+  {
+    return self.compare(otherDate) == .OrderedAscending;
+  }
+  
+  func isAfter(otherDate:NSDate) -> Bool
+  {
+    return self.compare(otherDate) == .OrderedDescending;
+  }
 }

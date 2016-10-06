@@ -38,6 +38,7 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
       { [unowned self] (nameEntry:TONetBIOSNameServiceEntry!) in
         let ipAddressString = self.netNames.resolveIPAddressWithName(nameEntry.name, type: nameEntry.type)
         self.netBIOSNames.removeValueForKey(ipAddressString)
+        self.reloadTableView()
       }
     )
   }
@@ -89,6 +90,7 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
       let hostName = cell.textLabel?.text
       let ipAddress = cell.detailTextLabel?.text
       let smbSession = TOSMBSession(hostName: hostName, ipAddress: ipAddress)
+      smbSession.setLoginCredentialsWithUserName("tc", password: "guest")
       
       fileListVC.session(smbSession, pathStart:"")
       

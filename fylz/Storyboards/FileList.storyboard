@@ -72,9 +72,22 @@
                                     <outlet property="delegate" destination="RRA-GX-php" id="zjG-p5-ike"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="a9b-Go-ByC" userLabel="SortControl" customClass="FLZSegmentedControl" customModule="fylz" customModuleProvider="target">
+                                <rect key="frame" x="297" y="67" width="293" height="29"/>
+                                <segments>
+                                    <segment title="Sort by Name"/>
+                                    <segment title="Sort by Size"/>
+                                    <segment title="Sort by Date"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sortFileList:" destination="RRA-GX-php" eventType="valueChanged" id="xT3-gU-lEq"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="a9b-Go-ByC" firstAttribute="trailing" secondItem="nSR-4g-8tz" secondAttribute="trailing" id="1y2-9E-AnY"/>
+                            <constraint firstItem="a9b-Go-ByC" firstAttribute="bottom" secondItem="nSR-4g-8tz" secondAttribute="top" constant="-5" id="IdL-bw-x1Z"/>
                             <constraint firstItem="nSR-4g-8tz" firstAttribute="leading" secondItem="sOp-nz-eN6" secondAttribute="leading" constant="10" id="Ofx-Jq-n3s"/>
                             <constraint firstItem="nSR-4g-8tz" firstAttribute="bottom" secondItem="sOp-nz-eN6" secondAttribute="bottom" constant="-20" id="aJs-FI-rtr"/>
                             <constraint firstItem="nSR-4g-8tz" firstAttribute="trailing" secondItem="sOp-nz-eN6" secondAttribute="trailing" constant="-10" id="aop-xy-AUR"/>
@@ -83,6 +96,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="eCq-vp-ID2"/>
                     <connections>
+                        <outlet property="sortControl" destination="a9b-Go-ByC" id="1xL-36-d70"/>
                         <outlet property="tableView" destination="nSR-4g-8tz" id="Em0-jr-eR3"/>
                     </connections>
                 </viewController>
