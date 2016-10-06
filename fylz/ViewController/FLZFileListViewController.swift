@@ -80,12 +80,15 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
   {
-    let cell = tableView.dequeueReusableCellWithIdentifier(FLZFileListViewController.CellReuse, forIndexPath: indexPath)
-
-    let file = fileList[indexPath.row]
+    guard let cell = tableView.dequeueReusableCellWithIdentifier(FLZFileListViewController.CellReuse, forIndexPath: indexPath) as? FLZFileCell
+    else
+    {
+      return UITableViewCell()
+    }
     
-    cell.textLabel?.text = (self.pathStart == "" ? file.filePath : file.name + (file.directory ? "/" : ""))
-    cell.detailTextLabel?.text = "Size:\(file.fileSize), Modified:\(file.modificationTime)"
+    guard let file = fileList[safe: indexPath.row] else { return cell }
+    
+    cell.file(file, asRoot:self.pathStart == "")
     cell.tag = indexPath.row
 
     return cell
@@ -98,7 +101,7 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   {
     if (identifier == SegueToFileList)
     {
-      guard let cell = sender as? UITableViewCell,
+      guard let cell = sender as? FLZFileCell,
             let file = fileList[safe: cell.tag]
       else
       {

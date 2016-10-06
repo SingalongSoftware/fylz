@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--File List View Controller-->
@@ -17,34 +18,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nSR-4g-8tz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nSR-4g-8tz">
                                 <rect key="frame" x="10" y="100" width="580" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FileListCell" textLabel="tww-ad-Ar5" detailTextLabel="rOb-HX-Qt6" style="IBUITableViewCellStyleSubtitle" id="760-Zc-H8F">
-                                        <rect key="frame" x="0.0" y="28" width="580" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FileListCell" rowHeight="80" id="760-Zc-H8F" customClass="FLZFileCell" customModule="fylz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="580" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="760-Zc-H8F" id="qWu-7a-2Ux">
-                                            <rect key="frame" x="0.0" y="0.0" width="580" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="580" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tww-ad-Ar5">
-                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiv-kJ-3O0" userLabel="detailLabel">
+                                                    <rect key="frame" x="60" y="46" width="38" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rOb-HX-Qt6">
-                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-vx-4Js" userLabel="selectionButton">
+                                                    <rect key="frame" x="5" y="15" width="50" height="50"/>
+                                                    <color key="backgroundColor" red="0.91545434599999997" green="0.88275310750000002" blue="0.93686868690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="p6B-vx-4Js" secondAttribute="height" multiplier="1:1" id="Igb-wT-kyh"/>
+                                                        <constraint firstAttribute="width" constant="50" id="e4y-bn-qcc"/>
+                                                    </constraints>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adv-6O-QIk" userLabel="mainLabel">
+                                                    <rect key="frame" x="60" y="10" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xiv-kJ-3O0" firstAttribute="leading" secondItem="Adv-6O-QIk" secondAttribute="leading" id="AU0-S3-cBl"/>
+                                                <constraint firstItem="Adv-6O-QIk" firstAttribute="top" secondItem="qWu-7a-2Ux" secondAttribute="top" constant="10" id="DQa-zy-zWq"/>
+                                                <constraint firstItem="p6B-vx-4Js" firstAttribute="centerY" secondItem="qWu-7a-2Ux" secondAttribute="centerY" id="K58-WZ-Hg6"/>
+                                                <constraint firstItem="p6B-vx-4Js" firstAttribute="leading" secondItem="qWu-7a-2Ux" secondAttribute="leading" constant="5" id="QNN-xG-obt"/>
+                                                <constraint firstItem="xiv-kJ-3O0" firstAttribute="top" secondItem="Adv-6O-QIk" secondAttribute="bottom" constant="15" id="UfP-yT-qD6"/>
+                                                <constraint firstItem="Adv-6O-QIk" firstAttribute="leading" secondItem="p6B-vx-4Js" secondAttribute="trailing" constant="5" id="qhS-or-fXy"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="detailLabel" destination="xiv-kJ-3O0" id="rxZ-71-aS0"/>
+                                            <outlet property="mainLabel" destination="Adv-6O-QIk" id="V4W-xb-s8s"/>
+                                            <outlet property="selectionButton" destination="p6B-vx-4Js" id="cO9-z5-8Nd"/>
                                             <segue destination="aN0-wK-6Jy" kind="show" identifier="toFileList" id="SvI-LF-hhU"/>
                                         </connections>
                                     </tableViewCell>

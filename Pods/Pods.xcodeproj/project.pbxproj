@@ -327,6 +327,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					A8F4E4CDF11CA5705D4336E262ECD155 = {
+						DevelopmentTeam = 65JJ25F4V6;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -385,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AF13D3EF37F8ABC56AE1DE386DD9FC0 /* TOSMBClient.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -402,6 +408,7 @@
 				MODULEMAP_FILE = "Target Support Files/TOSMBClient/TOSMBClient.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = TOSMBClient;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -560,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AF13D3EF37F8ABC56AE1DE386DD9FC0 /* TOSMBClient.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -577,6 +585,7 @@
 				MODULEMAP_FILE = "Target Support Files/TOSMBClient/TOSMBClient.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = TOSMBClient;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
