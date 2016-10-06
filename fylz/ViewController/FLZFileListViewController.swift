@@ -12,31 +12,52 @@ import TOSMBClient
 class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   static let CellReuse = "FileListCell"
+  let SegueToFileList = "toFileList"
+
+  private var smbSession:TOSMBSession!
+  private var pathStart:String = ""
   
-  var smbSession:TOSMBSession!
-  var fileList = [TOSMBSessionFile]()
+  private var fileList = [TOSMBSessionFile]()
+  
   
   @IBOutlet weak var tableView: UITableView!
   
   // MARK: Public
-  
-  func host(hostName:String?, ipAddress:String?)
+
+  func session(session:TOSMBSession, pathStart:String)
   {
-    guard let hostName = hostName, ipAddress = ipAddress else
+    smbSession = session
+    self.pathStart = pathStart
+    
+    if (self.pathStart == "")
     {
       return
     }
     
-    print ("host \(hostName), ip \(ipAddress)")
-    smbSession = TOSMBSession(hostName: hostName, ipAddress: ipAddress)
+    if (!self.pathStart.hasSuffix("/"))
+    {
+      self.pathStart = self.pathStart + "/"
+    }
+    
+    if (!self.pathStart.hasPrefix("/"))
+    {
+      self.pathStart = self.pathStart + "/"
+    }
+    
+    if (!self.pathStart.hasPrefix("//"))
+    {
+      self.pathStart = self.pathStart + "/"
+    }
+    
+    print (self.pathStart)
   }
-  
+    
   // MARK: Lifecycle
   
   override func viewDidLoad()
   {
     smbSession.setLoginCredentialsWithUserName("", password: "")
-    guard let files = try? smbSession.requestContentsOfDirectoryAtFilePath("") as! [TOSMBSessionFile] else { return }
+    guard let files = try? smbSession.requestContentsOfDirectoryAtFilePath(pathStart) as! [TOSMBSessionFile] else { return }
 
     fileList.appendContentsOf(files)
   
@@ -63,10 +84,48 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
 
     let file = fileList[indexPath.row]
     
-    cell.textLabel?.text = file.filePath + (file.directory ? "/" : "")
+    cell.textLabel?.text = (self.pathStart == "" ? file.filePath : file.name + (file.directory ? "/" : ""))
     cell.detailTextLabel?.text = "Size:\(file.fileSize), Modified:\(file.modificationTime)"
-    
+    cell.tag = indexPath.row
+
     return cell
+  }
+  
+  
+  // MARK: Transition
+  
+  override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool
+  {
+    if (identifier == SegueToFileList)
+    {
+      guard let cell = sender as? UITableViewCell,
+            let file = fileList[safe: cell.tag]
+      else
+      {
+        return false
+      }
+      
+      return file.directory
+    }
+    
+    return true
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    if (segue.identifier == SegueToFileList)
+    {
+      guard let fileListVC = segue.destinationViewController as? FLZFileListViewController,
+        let cell = sender as? UITableViewCell,
+        let file = fileList[safe: cell.tag]
+      else
+      {
+        return
+      }
+
+      fileListVC.session(smbSession, pathStart: "\(pathStart)\(file.name)")
+
+    }
   }
   
 

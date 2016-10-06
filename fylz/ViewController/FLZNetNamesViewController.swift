@@ -32,18 +32,14 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
       { [unowned self] (nameEntry:TONetBIOSNameServiceEntry!) in
         let ipAddressString = self.netNames.resolveIPAddressWithName(nameEntry.name, type: nameEntry.type)
         self.netBIOSNames[ipAddressString] = nameEntry;
-        
         self.reloadTableView()
-
       },
       removed:
       { [unowned self] (nameEntry:TONetBIOSNameServiceEntry!) in
         let ipAddressString = self.netNames.resolveIPAddressWithName(nameEntry.name, type: nameEntry.type)
         self.netBIOSNames.removeValueForKey(ipAddressString)
-        
       }
     )
-    
   }
 
   override func didReceiveMemoryWarning() {
@@ -90,7 +86,12 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
         return
       }
       
-      fileListVC.host(cell.textLabel?.text, ipAddress: cell.detailTextLabel?.text)
+      let hostName = cell.textLabel?.text
+      let ipAddress = cell.detailTextLabel?.text
+      let smbSession = TOSMBSession(hostName: hostName, ipAddress: ipAddress)
+      
+      fileListVC.session(smbSession, pathStart:"")
+      
     }
   }
   

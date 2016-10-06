@@ -44,6 +44,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aN0-wK-6Jy" kind="show" identifier="toFileList" id="SvI-LF-hhU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -68,6 +71,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MB3-tv-QSg" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976" y="66"/>
+        </scene>
+        <!--FileList-->
+        <scene sceneID="neY-Fe-6H6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FileList" id="aN0-wK-6Jy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WLr-ha-Cgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595.5" y="-69"/>
         </scene>
     </scenes>
 </document>

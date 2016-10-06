@@ -15,6 +15,7 @@
 		120DEB4E1DA1D8C6002D7904 /* FLZAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DEB461DA1D8C6002D7904 /* FLZAppDelegate.swift */; };
 		12112D971DA381F30091F2D6 /* FileList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12112D961DA381F30091F2D6 /* FileList.storyboard */; };
 		12112D991DA385210091F2D6 /* FLZFileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12112D981DA385210091F2D6 /* FLZFileListViewController.swift */; };
+		12112D9C1DA5F6DE0091F2D6 /* CollectionType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12112D9B1DA5F6DE0091F2D6 /* CollectionType+Extensions.swift */; };
 		8B58BCF18F3827DE75854A3A /* Pods_fylz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6328B0987796EE2170EAA6E8 /* Pods_fylz.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		120DEB591DA2320B002D7904 /* fylz-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fylz-Bridging-Header.h"; sourceTree = "<group>"; };
 		12112D961DA381F30091F2D6 /* FileList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FileList.storyboard; sourceTree = "<group>"; };
 		12112D981DA385210091F2D6 /* FLZFileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLZFileListViewController.swift; sourceTree = "<group>"; };
+		12112D9B1DA5F6DE0091F2D6 /* CollectionType+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CollectionType+Extensions.swift"; path = "Extensions/CollectionType+Extensions.swift"; sourceTree = "<group>"; };
 		6328B0987796EE2170EAA6E8 /* Pods_fylz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fylz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664E97AC6E68641E52CA5CE0 /* Pods-fylz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fylz.release.xcconfig"; path = "Pods/Target Support Files/Pods-fylz/Pods-fylz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				120DEB421DA1D8C6002D7904 /* ViewController */,
 				120DEB491DA1D8C6002D7904 /* View */,
 				120DEB481DA1D8C6002D7904 /* Model */,
+				12112D9A1DA5F6B20091F2D6 /* Extensions */,
 				120DEB3F1DA1D8C6002D7904 /* Storyboards */,
 				120DEB441DA1D8C6002D7904 /* Support */,
 			);
@@ -150,6 +153,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		12112D9A1DA5F6B20091F2D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12112D9B1DA5F6DE0091F2D6 /* CollectionType+Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		6973BB485C26A8BC592E2131 /* Pods */ = {
@@ -327,6 +338,7 @@
 				120DEB4C1DA1D8C6002D7904 /* FLZNetNamesViewController.swift in Sources */,
 				120DEB4E1DA1D8C6002D7904 /* FLZAppDelegate.swift in Sources */,
 				12112D991DA385210091F2D6 /* FLZFileListViewController.swift in Sources */,
+				12112D9C1DA5F6DE0091F2D6 /* CollectionType+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
