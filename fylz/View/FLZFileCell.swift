@@ -53,8 +53,10 @@ class FLZFileCell: UITableViewCell
   }
   
   
-  override func setSelected(selected: Bool, animated: Bool) {
-    let subviewBackgrounds = self.contentView.subviews.map({ (subview) -> (UIView,UIColor?) in
+  override func setSelected(selected: Bool, animated: Bool)
+  {
+    let subviewBackgrounds = self.contentView.subviews.map(
+    { (subview) -> (UIView,UIColor?) in
       (subview,subview.backgroundColor)
     })
     super.setSelected(selected, animated: animated)
@@ -66,14 +68,17 @@ class FLZFileCell: UITableViewCell
     }
   }
   
-  override func setHighlighted(highlighted: Bool, animated: Bool) {
-    let subviewBackgrounds = self.contentView.subviews.map({ (subview) -> (UIView,UIColor?) in
+  override func setHighlighted(highlighted: Bool, animated: Bool)
+  {
+    let subviewBackgrounds = self.contentView.subviews.map(
+    { (subview) -> (UIView,UIColor?) in
       (subview,subview.backgroundColor)
     })
     super.setHighlighted(highlighted, animated: animated)
     
     if(highlighted) {
-      let _ = subviewBackgrounds.map({ subview, backgroundColor in
+      let _ = subviewBackgrounds.map(
+      { subview, backgroundColor in
         subview.backgroundColor = backgroundColor
       })
     }
