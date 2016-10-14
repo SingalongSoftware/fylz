@@ -25,22 +25,29 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    netNames.startDiscoveryWithTimeOut(
-      NetBIOSDiscoveryTimeout,
-      added:
-      { [unowned self] (nameEntry:TONetBIOSNameServiceEntry!) in
-        let ipAddressString = self.netNames.resolveIPAddressWithName(nameEntry.name, type: nameEntry.type)
+
+    netNames.startDiscovery(
+      withTimeOut: NetBIOSDiscoveryTimeout,
+      added: { [unowned self] (nameEntry:TONetBIOSNameServiceEntry?) in
+        guard let ipAddressString = self.netNames.resolveIPAddress(withName: nameEntry?.name, type: (nameEntry?.type)!) else
+        {
+          return
+        }
+        
         self.netBIOSNames[ipAddressString] = nameEntry;
         self.reloadTableView()
+      
       },
-      removed:
-      { [unowned self] (nameEntry:TONetBIOSNameServiceEntry!) in
-        let ipAddressString = self.netNames.resolveIPAddressWithName(nameEntry.name, type: nameEntry.type)
-        self.netBIOSNames.removeValueForKey(ipAddressString)
+      removed: { [unowned self] (nameEntry:TONetBIOSNameServiceEntry?) in
+        guard let ipAddressString = self.netNames.resolveIPAddress(withName: nameEntry?.name, type: (nameEntry?.type)!) else
+        {
+          return
+        }
+        self.netBIOSNames.removeValue(forKey: ipAddressString)
         self.reloadTableView()
       }
     )
+  
   }
 
   override func didReceiveMemoryWarning() {
@@ -50,23 +57,23 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
 
   // MARK: UITableViewDataSource
 
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int // Default is 1 if not implemented
+  func numberOfSections(in tableView: UITableView) -> Int // Default is 1 if not implemented
   {
     return 1
   }
   
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
   {
     return self.netBIOSNames.count
   }
   
 
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
   {
-    let cell = tableView.dequeueReusableCellWithIdentifier(FLZNetNamesViewController.CellReuse, forIndexPath: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: FLZNetNamesViewController.CellReuse, for: indexPath)
     
-    let ipAddress = Array(netBIOSNames.keys)[indexPath.row]
+    let ipAddress = Array(netBIOSNames.keys)[(indexPath as NSIndexPath).row]
     let netName = netBIOSNames[ipAddress]?.name
     
     cell.textLabel?.text = netName
@@ -77,11 +84,11 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
   
   // MARK: Transition
   
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     if (segue.identifier == SegueToFileList)
     {
-      guard let fileListVC = segue.destinationViewController as? FLZFileListViewController,
+      guard let fileListVC = segue.destination as? FLZFileListViewController,
             let cell = sender as? UITableViewCell else
       {
         return
@@ -89,7 +96,12 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
       
       let hostName = cell.textLabel?.text
       let ipAddress = cell.detailTextLabel?.text
-      let smbSession = TOSMBSession(hostName: hostName, ipAddress: ipAddress)
+      
+      guard let smbSession = TOSMBSession(hostName: hostName, ipAddress: ipAddress) else
+      {
+        return
+      }
+      
       smbSession.setLoginCredentialsWithUserName("tc", password: "guest")
       
       fileListVC.session(smbSession, pathStart:"")
@@ -101,11 +113,11 @@ class FLZNetNamesViewController: UIViewController, UITableViewDelegate, UITableV
   
   func reloadTableView()
   {
-    let isMainThread:BooleanType = NSThread.isMainThread()
+    let isMainThread:Bool = Thread.isMainThread
 
     guard isMainThread else
     {
-      dispatch_async(dispatch_get_main_queue(),{ () -> Void in self.reloadTableView() } )
+      DispatchQueue.main.async(execute: { () -> Void in self.reloadTableView() } )
       return;
     }
     

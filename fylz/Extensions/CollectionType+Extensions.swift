@@ -8,9 +8,11 @@
 
 import Foundation
 
-extension CollectionType {
+extension Collection {
   /// Returns the element at the specified index iff it is within bounds, otherwise nil.
-  subscript (safe index: Index) -> Generator.Element? {
-    return indices.contains(index) ? self[index] : nil
+  
+  subscript (safe index: Index) -> Iterator.Element?
+  {
+    return indices.filter { $0 as! Self.Index == index }.count > 0 ? self[index] : nil
   }
 }

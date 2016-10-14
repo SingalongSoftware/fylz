@@ -11,14 +11,14 @@ import UIKit
 extension String
 {
 
-  func caselessGreaterThan(other:String) -> Bool
+  func caselessGreaterThan(_ other:String) -> Bool
   {
-    return self.lowercaseString > other.lowercaseString
+    return self.lowercased() > other.lowercased()
   }
   
-  func caselessLesserThan(other:String) -> Bool
+  func caselessLesserThan(_ other:String) -> Bool
   {
-    return self.lowercaseString < other.lowercaseString
+    return self.lowercased() < other.lowercased()
   }
   
 }

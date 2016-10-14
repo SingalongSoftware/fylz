@@ -8,30 +8,30 @@
 
 import UIKit
 
-extension NSDate {
-  func years(from date: NSDate) -> Int {
-    return NSCalendar.currentCalendar().components([.Year], fromDate: date, toDate:self, options:NSCalendarOptions()).year ?? 0
+extension Date {
+  func years(from date: Date) -> Int {
+    return (Calendar.current as NSCalendar).components([.year], from: date, to:self, options:NSCalendar.Options()).year ?? 0
   }
-  func months(from date: NSDate) -> Int {
-    return NSCalendar.currentCalendar().components([.Month], fromDate: date, toDate:self, options:NSCalendarOptions()).month ?? 0
+  func months(from date: Date) -> Int {
+    return (Calendar.current as NSCalendar).components([.month], from: date, to:self, options:NSCalendar.Options()).month ?? 0
   }
-  func weeks(from date: NSDate) -> Int {
-    return NSCalendar.currentCalendar().components([.WeekOfYear], fromDate: date, toDate:self, options:NSCalendarOptions()).weekOfYear ?? 0
+  func weeks(from date: Date) -> Int {
+    return (Calendar.current as NSCalendar).components([.weekOfYear], from: date, to:self, options:NSCalendar.Options()).weekOfYear ?? 0
   }
-  func days(from date: NSDate) -> Int {
-    return NSCalendar.currentCalendar().components([.Day], fromDate: date, toDate:self, options:NSCalendarOptions()).day ?? 0
+  func days(from date: Date) -> Int {
+    return (Calendar.current as NSCalendar).components([.day], from: date, to:self, options:NSCalendar.Options()).day ?? 0
   }
-  func hours(from date: NSDate) -> Int {
-    return NSCalendar.currentCalendar().components([.Hour], fromDate: date, toDate:self, options:NSCalendarOptions()).hour ?? 0
+  func hours(from date: Date) -> Int {
+    return (Calendar.current as NSCalendar).components([.hour], from: date, to:self, options:NSCalendar.Options()).hour ?? 0
   }
-  func minutes(from date: NSDate) -> Int {
-    return NSCalendar.currentCalendar().components([.Minute], fromDate: date, toDate:self, options:NSCalendarOptions()).minute ?? 0
+  func minutes(from date: Date) -> Int {
+    return (Calendar.current as NSCalendar).components([.minute], from: date, to:self, options:NSCalendar.Options()).minute ?? 0
   }
-  func seconds(from date: NSDate) -> Int {
-    return NSCalendar.currentCalendar().components([.Second], fromDate: date).second ?? 0
+  func seconds(from date: Date) -> Int {
+    return (Calendar.current as NSCalendar).components([.second], from: date).second ?? 0
   }
   var relativeTime: String {
-    let now = NSDate()
+    let now = Date()
     if now.years(from: self)   > 0 {
       return now.years(from: self).description  + " year"  + { return now.years(from: self)   > 1 ? "s" : "" }() + " ago"
     }
@@ -58,13 +58,13 @@ extension NSDate {
     return ""
   }
   
-  func isBefore(otherDate:NSDate) -> Bool
+  func isBefore(_ otherDate:Date) -> Bool
   {
-    return self.compare(otherDate) == .OrderedAscending;
+    return self.compare(otherDate) == .orderedAscending;
   }
   
-  func isAfter(otherDate:NSDate) -> Bool
+  func isAfter(_ otherDate:Date) -> Bool
   {
-    return self.compare(otherDate) == .OrderedDescending;
+    return self.compare(otherDate) == .orderedDescending;
   }
 }

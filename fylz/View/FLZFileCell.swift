@@ -16,10 +16,10 @@ class FLZFileCell: UITableViewCell
   @IBOutlet weak var detailLabel: UILabel!
   @IBOutlet weak var selectionButton: UIButton!
 
-  private var file:TOSMBSessionFile!
-  private var fileIsRoot:Bool = false
+  fileprivate var file:TOSMBSessionFile!
+  fileprivate var fileIsRoot:Bool = false
 
-  func file(file:TOSMBSessionFile, asRoot:Bool)
+  func file(_ file:TOSMBSessionFile, asRoot:Bool)
   {
     self.file = file
     fileIsRoot = asRoot
@@ -37,15 +37,15 @@ class FLZFileCell: UITableViewCell
     }
     else
     {
-      let fileSizeString = NSByteCountFormatter.stringFromByteCount(Int64(file.fileSize), countStyle:NSByteCountFormatterCountStyle.Binary)
+      let fileSizeString = ByteCountFormatter.string(fromByteCount: Int64(file.fileSize), countStyle:ByteCountFormatter.CountStyle.binary)
       
       var modificationDateString = file.modificationTime.relativeTime
       
-      if (file.modificationTime.days(from: NSDate()) > 1)
+      if (file.modificationTime.days(from: Date()) > 1)
       {
-        modificationDateString = NSDateFormatter.localizedStringFromDate(file.modificationTime, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+        modificationDateString = DateFormatter.localizedString(from: file.modificationTime, dateStyle: .short, timeStyle: .short)
       }
-      modificationDateString = NSDateFormatter.localizedStringFromDate(file.modificationTime, dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+      modificationDateString = DateFormatter.localizedString(from: file.modificationTime, dateStyle: .medium, timeStyle: .short)
 
       detailLabel.text = "Size:\(fileSizeString), Modified:\(modificationDateString)"
 
@@ -53,7 +53,7 @@ class FLZFileCell: UITableViewCell
   }
   
   
-  override func setSelected(selected: Bool, animated: Bool)
+  override func setSelected(_ selected: Bool, animated: Bool)
   {
     let subviewBackgrounds = self.contentView.subviews.map(
     { (subview) -> (UIView,UIColor?) in
@@ -68,7 +68,7 @@ class FLZFileCell: UITableViewCell
     }
   }
   
-  override func setHighlighted(highlighted: Bool, animated: Bool)
+  override func setHighlighted(_ highlighted: Bool, animated: Bool)
   {
     let subviewBackgrounds = self.contentView.subviews.map(
     { (subview) -> (UIView,UIColor?) in

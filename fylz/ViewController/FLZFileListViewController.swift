@@ -11,15 +11,15 @@ import TOSMBClient
 
 enum SortOrder
 {
-  case Ascending
-  case Descending
+  case ascending
+  case descending
 }
 
 enum SortBy:Int
 {
-  case Name = 0
-  case Size
-  case Date
+  case name = 0
+  case size
+  case date
 }
 
 class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -27,20 +27,20 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   static let CellReuse = "FileListCell"
   let SegueToFileList = "toFileList"
 
-  private var smbSession:TOSMBSession!
-  private var pathStart:String = ""
+  fileprivate var smbSession:TOSMBSession!
+  fileprivate var pathStart:String = ""
   
-  private var fileList = [TOSMBSessionFile]()
+  fileprivate var fileList = [TOSMBSessionFile]()
   
-  private var sortOrder = [SortOrder](count: 3, repeatedValue: SortOrder.Descending)
-  private var currentSort = SortBy.Date
+  fileprivate var sortOrder = [SortOrder](repeating: SortOrder.descending, count: 3)
+  fileprivate var currentSort = SortBy.date
   
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var sortControl: UISegmentedControl!
   
   // MARK: Public
 
-  func session(session:TOSMBSession, pathStart:String)
+  func session(_ session:TOSMBSession, pathStart:String)
   {
     smbSession = session
     self.pathStart = pathStart
@@ -72,43 +72,44 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   
   override func viewDidLoad()
   {
-    guard let files = try? smbSession.requestContentsOfDirectoryAtFilePath(pathStart) as! [TOSMBSessionFile] else { return }
+    guard let files = try? smbSession.requestContentsOfDirectory(atFilePath: pathStart) as! [TOSMBSessionFile] else { return }
 
-    fileList.appendContentsOf(files)
+    fileList.append(contentsOf: files)
   
-    sortOrder[SortBy.Name.rawValue] = SortOrder.Ascending
-    sortOrder[SortBy.Date.rawValue] = SortOrder.Descending
-    sortOrder[SortBy.Size.rawValue] = SortOrder.Descending
+    sortOrder[SortBy.name.rawValue] = SortOrder.ascending
+    sortOrder[SortBy.date.rawValue] = SortOrder.descending
+    sortOrder[SortBy.size.rawValue] = SortOrder.descending
     
     sortFileList(sortControl)
+    
   }
   
   // MARK: UITableViewDataSource
   
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int // Default is 1 if not implemented
+  func numberOfSections(in tableView: UITableView) -> Int // Default is 1 if not implemented
   {
     return 1
   }
   
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
   {
     return fileList.count
   }
   
   
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
   {
-    guard let cell = tableView.dequeueReusableCellWithIdentifier(FLZFileListViewController.CellReuse, forIndexPath: indexPath) as? FLZFileCell
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: FLZFileListViewController.CellReuse, for: indexPath) as? FLZFileCell
     else
     {
       return UITableViewCell()
     }
     
-    guard let file = fileList[safe: indexPath.row] else { return cell }
+    guard let file = fileList[safe: (indexPath as NSIndexPath).row] else { return cell }
     
     cell.file(file, asRoot:self.pathStart == "")
-    cell.tag = indexPath.row
+    cell.tag = (indexPath as NSIndexPath).row
 
     return cell
   }
@@ -116,7 +117,7 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   
   // MARK: Transition
   
-  override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool
+  override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
   {
     if (identifier == SegueToFileList)
     {
@@ -133,19 +134,20 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
     return true
   }
   
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     if (segue.identifier == SegueToFileList)
     {
-      guard let fileListVC = segue.destinationViewController as? FLZFileListViewController,
+      guard let fileListVC = segue.destination as? FLZFileListViewController,
             let cell = sender as? UITableViewCell,
-            let file = fileList[safe: cell.tag]
+            let file = fileList[safe: cell.tag],
+            let filename = file.name
       else
       {
         return
       }
 
-      fileListVC.session(smbSession, pathStart: "\(pathStart)\(file.name)")
+      fileListVC.session(smbSession, pathStart: "\(pathStart)\(filename)")
 
     }
   }
@@ -153,7 +155,7 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
   // MARK: Segmented Control
   
   
-  @IBAction func sortFileList(sender: UISegmentedControl)
+  @IBAction func sortFileList(_ sender: UISegmentedControl)
   {
     if (self.currentSort.rawValue == sender.selectedSegmentIndex)
     {
@@ -163,34 +165,34 @@ class FLZFileListViewController: UIViewController, UITableViewDelegate, UITableV
     self.sortFileList(by: SortBy(rawValue: sender.selectedSegmentIndex)!)
   }
   
-  func sortOrderToggle(sortBy:SortBy)
+  func sortOrderToggle(_ sortBy:SortBy)
   {
-    let ascending = sortOrder[sortBy.rawValue] == SortOrder.Ascending
+    let ascending = sortOrder[sortBy.rawValue] == SortOrder.ascending
     if (ascending)
     {
-      sortOrder[sortBy.rawValue] = SortOrder.Descending
+      sortOrder[sortBy.rawValue] = SortOrder.descending
     }
     else
     {
-      sortOrder[sortBy.rawValue] = SortOrder.Ascending
+      sortOrder[sortBy.rawValue] = SortOrder.ascending
     }
   }
   
   func sortFileList(by sortBy:SortBy)
   {
-    let ascending = sortOrder[sortBy.rawValue] == SortOrder.Ascending
+    let ascending = sortOrder[sortBy.rawValue] == SortOrder.ascending
     switch (sortBy.rawValue)
     {
-      case SortBy.Name.rawValue:
-        fileList = fileList.sort({ ascending ? $0.name.caselessLesserThan($1.name) : $0.name.caselessGreaterThan($1.name) })
+      case SortBy.name.rawValue:
+        fileList = fileList.sorted(by: { ascending ? $0.name.caselessLesserThan($1.name) : $0.name.caselessGreaterThan($1.name) })
         break;
       
-      case SortBy.Size.rawValue:
-        fileList = fileList.sort({ ascending ? $0.fileSize < $1.fileSize : $0.fileSize > $1.fileSize })
+      case SortBy.size.rawValue:
+        fileList = fileList.sorted(by: { ascending ? $0.fileSize < $1.fileSize : $0.fileSize > $1.fileSize })
         break;
       
       default:
-        fileList = fileList.sort({ (file1, file2) in
+        fileList = fileList.sorted(by: { (file1, file2) in
           guard let modification1 = file1.modificationTime,
                 let modification2 = file2.modificationTime
           else

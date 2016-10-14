@@ -247,9 +247,11 @@
 					120DEB161DA1D3C9002D7904 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 65JJ25F4V6;
+						LastSwiftMigration = 0800;
 					};
 					120DEB2A1DA1D3C9002D7904 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 120DEB161DA1D3C9002D7904;
 					};
 				};
@@ -477,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SingalongSoftware.fylz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "Pods/**";
 			};
 			name = Debug;
@@ -492,6 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SingalongSoftware.fylz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "Pods/**";
 			};
 			name = Release;
@@ -504,6 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SingalongSoftware.fylzTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fylz.app/fylz";
 			};
 			name = Debug;
@@ -516,6 +521,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SingalongSoftware.fylzTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fylz.app/fylz";
 			};
 			name = Release;

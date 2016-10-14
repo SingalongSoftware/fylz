@@ -10,12 +10,12 @@ import UIKit
 
 class FLZSegmentedControl: UISegmentedControl
 {
-  override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     let current = self.selectedSegmentIndex;
-    super.touchesEnded(touches, withEvent: event)
+    super.touchesEnded(touches, with: event)
     if (current == self.selectedSegmentIndex)
     {
-      self.sendActionsForControlEvents(.ValueChanged)
+      self.sendActions(for: .valueChanged)
     }
   }
   
